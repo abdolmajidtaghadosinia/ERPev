@@ -339,6 +339,8 @@ function dropOrphanFiles() {
 }
 
 // ---------- Files ----------
+const VIEW_TYPES = { pdf: 'application/pdf', jpg: 'image/jpeg', jpeg: 'image/jpeg', mp4: 'video/mp4', docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' };
+const VIEW_BY_FETCH = ['pdf', 'docx']; // rendered in the page by pdf.js / docx-preview; requires the X-Viewer header // types shown inline in the viewer
 const ALLOWED_EXT = ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'mp4', 'zip'];
 function magicOk(ext, b) {
   const h = (...xs) => xs.every((x, i) => b[i] === x);
@@ -423,6 +425,104 @@ function buildPage() {
     "logout: () => { fetch('/api/logout', { method: 'POST' }).catch(() => {}); this.logoutNow(); }, changePw: () => this.changePassword(),");
   swap('<button sc-camel-on-click="{{ logout }}" title="خروج"',
     '<button sc-camel-on-click="{{ changePw }}" title="تغییر رمز عبور" aria-label="تغییر رمز عبور" style="height:36px;padding:0 8px;border:none;background:transparent;border-radius:8px;cursor:pointer;color:#6b7280;font-size:12px">رمز</button><button sc-camel-on-click="{{ logout }}" title="خروج"');
+  // assessee whose company has no assessment yet: show a message instead of a blank page
+  swap("sMAssess: sc === 'm-assess' };", "sMAssess: sc === 'm-assess', sNoA: me.role === 'ASSESSEE' && !a };");
+  swap('<!-- ASSESSEE HOME -->', '<sc-if value="{{ sNoA }}"><div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:40px 24px;text-align:center;color:#374151;font-size:14px;line-height:2"><div style="font-size:16px;font-weight:700;margin-bottom:6px">هنوز ارزیابی‌ای برای شرکت شما ایجاد نشده است</div>مدیر سامانه باید برای شرکت شما یک ارزیابی ایجاد کند. پس از آن می‌توانید پرسش‌نامه را تکمیل کنید.</div></sc-if><!-- ASSESSEE HOME -->');
+  // ---- file management: viewer (no download for assessors) + per-assessment files page ----
+  const EYE = '<svg width="15" height="15" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
+  const IC_BTN = 'width:28px;height:28px;border:none;background:transparent;border-radius:6px;cursor:pointer;color:#155e75;display:flex;align-items:center;justify-content:center';
+  swap('onDownload: () => this.download(f) }))', 'onDownload: () => this.download(f), onView: () => this.viewFile(f), canDownload: me.role !== \'ASSESSOR\' }))');
+  swap('<button sc-camel-on-click="{{ fl.onDownload }}"',
+    '<button sc-camel-on-click="{{ fl.onView }}" aria-label="مشاهده" title="مشاهده" style="' + IC_BTN + '" style-hover="background:#eaf7fa">' + EYE + '</button><sc-if value="{{ fl.canDownload }}"><button sc-camel-on-click="{{ fl.onDownload }}"');
+  swap('<sc-if value="{{ fl.canRemove }}">', '</sc-if><sc-if value="{{ fl.canRemove }}">');
+  swap("let activeKey = S.screen;", "if (me.role !== 'ADMIN') defs.push(['files', 'مدیریت فایل‌ها', 'Folder', !a]); let activeKey = S.screen;");
+  swap("iUsers: icon === 'Users',", "iUsers: icon === 'Users', iFolder: icon === 'Folder',");
+  swap('<sc-if value="{{ it.iUsers }}">', '<sc-if value="{{ it.iFolder }}"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"></path></svg></sc-if><sc-if value="{{ it.iUsers }}">');
+  swap("sNoA: me.role === 'ASSESSEE' && !a };", "sNoA: me.role === 'ASSESSEE' && !a, sFiles: sc === 'files' && !!a, viewerOn: !!S.viewer, vw: this.viewerVals() };");
+  swap('if (v.sQuest) v.qv = this.questVals(me, a);', 'if (v.sQuest) v.qv = this.questVals(me, a); if (v.sFiles) v.fv = this.filesVals(me, a);');
+  swap('removeFile(aid, qid, fid) {', `viewFile(f) {
+    if (f.sample) { this.toast('فایل نمونه‌ی ساختگی است و محتوایی برای نمایش ندارد', 'info'); return; }
+    const ext = (f.name.split('.').pop() || '').toLowerCase();
+    this.setState({ viewer: { id: f.id, name: f.name, kind: { pdf: 'doc', docx: 'doc', jpg: 'img', jpeg: 'img', mp4: 'vid' }[ext] || 'none', fmt: ext } });
+    if (ext === 'pdf' || ext === 'docx') setTimeout(() => this.renderDoc(f.id, ext), 60);
+  }
+  loadJs(url) {
+    this.jsLoaded = this.jsLoaded || {};
+    return this.jsLoaded[url] = this.jsLoaded[url] || new Promise((ok, no) => { const el = document.createElement('script'); el.src = url; el.onload = ok; el.onerror = () => { delete this.jsLoaded[url]; no(new Error('load')); }; document.head.appendChild(el); });
+  }
+  async renderDoc(id, ext) {
+    const box = document.getElementById('vw-doc'); if (!box) return;
+    const live = () => this.state.viewer && this.state.viewer.id === id && document.getElementById('vw-doc') === box;
+    const note = (t, c) => { box.innerHTML = ''; const d = document.createElement('div'); d.style.cssText = 'padding:24px;font-size:14px;line-height:2;color:' + (c || '#6b7280'); d.textContent = t; box.appendChild(d); };
+    note('در حال بارگذاری…');
+    try {
+      const r = await fetch('/api/files/' + encodeURIComponent(id) + '?view=1', { headers: { 'X-Viewer': '1' } });
+      if (!r.ok) { note('نمایش فایل مجاز نیست یا فایل پیدا نشد', '#b91c1c'); return; }
+      const buf = await r.arrayBuffer(); if (!live()) return;
+      if (ext === 'pdf') {
+        await this.loadJs('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js');
+        if (!this.pdfWorker) this.pdfWorker = URL.createObjectURL(new Blob([await (await fetch('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js')).text()], { type: 'text/javascript' }));
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = this.pdfWorker;
+        const pdf = await window.pdfjsLib.getDocument({ data: buf, disableFontFace: true }).promise; if (!live()) return;
+        box.innerHTML = ''; box.style.background = '#e5e7eb';
+        const W = Math.max(300, Math.min(box.clientWidth - 32, 900)), N = Math.min(pdf.numPages, 60);
+        for (let i = 1; i <= N; i++) {
+          const pg = await pdf.getPage(i); if (!live()) return;
+          const base = pg.getViewport({ scale: 1 }), vp = pg.getViewport({ scale: W / base.width * 2 });
+          const cv = document.createElement('canvas'); cv.width = vp.width; cv.height = vp.height;
+          cv.style.cssText = 'display:block;margin:12px auto;width:' + W + 'px;max-width:100%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.2)';
+          cv.oncontextmenu = e => e.preventDefault(); box.appendChild(cv);
+          await pg.render({ canvasContext: cv.getContext('2d'), viewport: vp }).promise;
+        }
+        if (pdf.numPages > N) note('فقط ' + N + ' صفحه‌ی اول از ' + pdf.numPages + ' صفحه نمایش داده شد.');
+      } else {
+        await this.loadJs('https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js');
+        await this.loadJs('https://cdn.jsdelivr.net/npm/docx-preview@0.3.2/dist/docx-preview.min.js');
+        box.innerHTML = ''; box.style.background = '#e5e7eb';
+        await window.docx.renderAsync(buf, box, null, { inWrapper: true, ignoreWidth: false, breakPages: true });
+      }
+    } catch (e) { if (live()) note('پیش‌نمایش فایل ممکن نشد. اتصال اینترنت (برای بارگذاری کتابخانه‌ی نمایش) و سالم‌بودن فایل را بررسی کنید.', '#b91c1c'); }
+  }
+  viewerVals() {
+    const v = this.state.viewer; if (!v) return {};
+    const src = '/api/files/' + encodeURIComponent(v.id) + '?view=1';
+    return { name: v.name, isDoc: v.kind === 'doc', isImg: v.kind === 'img', isVid: v.kind === 'vid', noPrev: v.kind === 'none', src, pdfSrc: src + '#toolbar=0&navpanes=0', close: () => this.setState({ viewer: null }), stop: e => e.stopPropagation() };
+  }
+  filesVals(me, a) {
+    const rows = [], canDl = me.role !== 'ASSESSOR';
+    for (const q of this.bank.questions) for (const f of (a.evidence[q.id] || [])) {
+      rows.push({ qnum: this.n(q.order), qtext: q.text_fa.length > 90 ? q.text_fa.slice(0, 90) + '…' : q.text_fa, name: f.name, meta: this.size(f.size) + ' · ' + this.d(f.at),
+        canDownload: canDl, onView: () => this.viewFile(f), onDownload: () => this.download(f), onGo: () => this.go('quest', { indId: q.indicator_id }) });
+    }
+    return { title: this.co(a.companyId).name, count: this.n(rows.length), rows, has: rows.length > 0, empty: rows.length === 0,
+      note: canDl ? 'فایل‌های بارگذاری‌شده برای هر بند پرسش‌نامه' : 'فایل‌ها فقط برای مشاهده‌اند و دانلود برای ارزیاب غیرفعال است' };
+  }
+  removeFile(aid, qid, fid) {`);
+  const BTN = 'style="' + IC_BTN + '" style-hover="background:#eaf7fa"';
+  swap('<!-- ASSESSEE HOME -->', `<sc-if value="{{ sFiles }}"><div style="display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12.5px;color:#6b7280">مدیریت فایل‌ها · {{ fv.count }} فایل</span><span style="font-size:22px;font-weight:700;color:#124d62">{{ fv.title }}</span><span style="font-size:12.5px;color:#6b7280">{{ fv.note }}</span></div>
+    <sc-if value="{{ fv.empty }}"><div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:40px 24px;text-align:center;color:#6b7280;font-size:14px">هنوز فایلی بارگذاری نشده است.</div></sc-if>
+    <sc-if value="{{ fv.has }}"><div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden">
+      <sc-for list="{{ fv.rows }}" as="r"><div style="display:flex;align-items:center;gap:12px;padding:10px 16px;border-top:1px solid #eef0f2;flex-wrap:wrap">
+        <button sc-camel-on-click="{{ r.onGo }}" title="رفتن به بند" style="border:none;background:#eaf7fa;color:#124d62;border-radius:999px;padding:2px 10px;font-size:12px;cursor:pointer">بند {{ r.qnum }}</button>
+        <div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:2px"><span style="font-size:13.5px;color:#1f2937;word-break:break-all">{{ r.name }}</span><span style="font-size:11.5px;color:#6b7280">{{ r.qtext }}</span></div>
+        <span style="font-size:12px;color:#6b7280">{{ r.meta }}</span>
+        <button sc-camel-on-click="{{ r.onView }}" aria-label="مشاهده" title="مشاهده" ${BTN}>${EYE}</button>
+        <sc-if value="{{ r.canDownload }}"><button sc-camel-on-click="{{ r.onDownload }}" aria-label="دانلود" title="دانلود" ${BTN}><svg width="15" height="15" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg></button></sc-if>
+      </div></sc-for>
+    </div></sc-if>
+  </div></sc-if>
+  <sc-if value="{{ viewerOn }}"><div sc-camel-on-click="{{ vw.close }}" style="position:fixed;inset:0;z-index:1000;background:rgba(15,23,32,.75);display:flex;align-items:center;justify-content:center;padding:20px">
+    <div sc-camel-on-click="{{ vw.stop }}" style="background:#fff;border-radius:14px;width:min(1100px,100%);height:min(90vh,100%);display:flex;flex-direction:column;overflow:hidden">
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid #e5e7eb"><span style="flex:1;font-size:14px;font-weight:600;color:#124d62;word-break:break-all">{{ vw.name }}</span><button sc-camel-on-click="{{ vw.close }}" style="height:34px;padding:0 16px;border:1px solid #d1d5db;background:#fff;border-radius:8px;cursor:pointer;font-size:13px">بستن</button></div>
+      <div style="flex:1;min-height:0;background:#f3f4f6;display:flex;align-items:center;justify-content:center">
+        <sc-if value="{{ vw.isDoc }}"><div id="vw-doc" style="width:100%;height:100%;overflow:auto"></div></sc-if>
+        <sc-if value="{{ vw.isImg }}"><img src="{{ vw.src }}" alt="" style="max-width:100%;max-height:100%;object-fit:contain"></sc-if>
+        <sc-if value="{{ vw.isVid }}"><video src="{{ vw.src }}" controls="" controlslist="nodownload" style="max-width:100%;max-height:100%"></video></sc-if>
+        <sc-if value="{{ vw.noPrev }}"><div style="padding:24px;color:#6b7280;font-size:14px;text-align:center;line-height:2">پیش‌نمایش این نوع فایل (doc، zip) ممکن نیست.</div></sc-if>
+      </div>
+    </div>
+  </div></sc-if><!-- ASSESSEE HOME -->`);
   swap("quick: [q('assessee-draft',", "quick: [], unusedQuick: [q('assessee-draft',");
   // Remove demo-only UI: quick-login divider, demo banners/badges, demo tools, "demo" wording.
   swap('display:flex;align-items:center;gap:12px;color:#9ca3af;font-size:12.5px\\"><div style=\\"flex:1;height:1px;background:#e5e7eb\\"><\\u002Fdiv>ورود سریع (نمایشی)', 'display:none">');
@@ -437,6 +537,22 @@ function buildPage() {
   swap('تصویری روشن از آمادگی سازمان شما.', 'تصویری روشن از آمادگی زیرساخت های منطقه ویژه اقتصادی');
   swap("مقایسه‌ی شرکت‌ها', 'Chart'", "مقایسه زیرساخت‌ها', 'Chart'");
   swap('مقایسه‌ی شرکت‌ها', 'مقایسه زیرساخت‌ها');
+  // Infrastructure comparison is an admin-panel feature covering every company, not an assessor page.
+  swap(", ['o-compare', 'مقایسه زیرساخت‌ها', 'Chart']]", ']');
+  swap("['m-assess', 'ارزیابی‌ها', 'List']];", "['m-assess', 'ارزیابی‌ها', 'List'], ['m-compare', 'مقایسه زیرساخت‌ها', 'Chart']];");
+  swap("sOCompare: sc === 'o-compare',", "sOCompare: sc === 'm-compare',");
+  swap('compareVals(me) {\\n    const S = this.state;\\n    const mine = S.db.assessments.filter(x => x.assessorId === me.id && x.status !== \'DRAFT\');',
+    'compareVals(me) {\n    const S = this.state;\n    const mine = S.db.assessments.filter(x => x.status !== \'DRAFT\'); // admin sees every company\'s assessment');
+  swap('return { ind: S.cmpInd, onInd:', `const inCmp = new Set(mine.map(x => x.companyId));
+    const pending = S.db.companies.filter(c => !inCmp.has(c.id)).map(c => { const a = S.db.assessments.find(x => x.companyId === c.id), st = a ? this.ST[a.status] : { or: 'بدون ارزیابی', bg: '#f3f4f6', fg: '#6b7280' };
+      return { name: c.name, sector: c.sector || '—', status: st.or, bg: st.bg, fg: st.fg }; });
+    return { pending, hasPending: pending.length > 0, summary: this.n(bars.length) + ' از ' + this.n(S.db.companies.length) + ' شرکت در مقایسه حضور دارند', ind: S.cmpInd, onInd:`);
+  swap('فضای کاری ارزیاب<\\u002Fdiv>\\n            <div style=\\"font-size:clamp(22px,2.4vw,28px);font-weight:700\\">مقایسه', 'فضای کاری مدیر سامانه · {{ cv.summary }}</div>\n            <div style="font-size:clamp(22px,2.4vw,28px);font-weight:700">مقایسه');
+  swap('رتبه‌بندی رسمی فقط برای ارزیابی‌های نهایی‌شده است؛', 'مقایسه‌ی یکپارچه‌ی همه‌ی شرکت‌ها برای درک وضعیت آمادگی. رتبه‌بندی رسمی فقط برای ارزیابی‌های نهایی‌شده است؛');
+  swap('<!-- ADMIN -->', `<sc-if value="{{ sOCompare }}"><sc-if value="{{ cv.hasPending }}"><div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 1px 2px rgba(16,24,40,.06)">
+    <div style="padding:14px 18px;border-bottom:1px solid #eef0f2;font-size:15px;font-weight:700">شرکت‌هایی که هنوز در مقایسه نیستند</div>
+    <div style="padding:6px 18px;display:flex;flex-direction:column"><sc-for list="{{ cv.pending }}" as="p"><div style="display:flex;align-items:center;gap:12px;padding:9px 0;border-top:1px solid #f3f4f6"><span style="flex:1;font-size:13.5px">{{ p.name }}</span><span style="font-size:12px;color:#6b7280">{{ p.sector }}</span><span style="font-size:12px;border-radius:999px;padding:2px 10px;background:{{ p.bg }};color:{{ p.fg }}">{{ p.status }}</span></div></sc-for></div>
+  </div></sc-if></sc-if><!-- ADMIN -->`);
   // Evidence upload / download go through the server (validated, stored outside the web root, access-controlled).
   swap("const id = 'u' + Date.now() + Math.random().toString(36).slice(2, 7); this.blobs[id] = f; good.push({ id, name: f.name, size: f.size, at: new Date().toISOString() });",
     "try { const up = await fetch('/api/files', { method: 'POST', headers: { 'X-Assessment': aid, 'X-Question': qid, 'X-Name': encodeURIComponent(f.name) }, body: f }); if (up.ok) good.push(await up.json()); else { let m = 'بارگذاری «' + f.name + '» ناموفق بود'; try { m = (await up.json()).error || m; } catch (e2) {} errs.push(m); } } catch (e3) { errs.push('ارتباط با سرور برقرار نیست'); }");
@@ -557,11 +673,35 @@ async function handle(req, res) {
     const f = db.prepare('SELECT * FROM files WHERE id = ?').get(dl[1]);
     const A = f && db.prepare('SELECT * FROM assessments WHERE id = ?').get(f.assessment_id);
     if (!f || !A || !canReadAssessment(p, A)) return send(404, { error: 'فایل پیدا نشد' });
-    res.writeHead(200, {
-      'Content-Type': 'application/octet-stream', 'Content-Length': f.size, 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff',
-      'Content-Disposition': `attachment; filename*=UTF-8''${encodeURIComponent(f.name)}`
-    });
-    return fs.createReadStream(path.join(UPLOAD_DIR, f.stored_name)).pipe(res);
+    const view = new URL(req.url, 'http://x').searchParams.get('view') === '1';
+    const ext = (f.name.split('.').pop() || '').toLowerCase();
+    if (p.role === 'ASSESSOR' && !view) return send(403, { error: 'ارزیاب فقط می‌تواند فایل را مشاهده کند؛ دانلود مجاز نیست' });
+    const file = path.join(UPLOAD_DIR, f.stored_name);
+    if (!view) {
+      res.writeHead(200, {
+        'Content-Type': 'application/octet-stream', 'Content-Length': f.size, 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff',
+        'Content-Disposition': `attachment; filename*=UTF-8''${encodeURIComponent(f.name)}`
+      });
+      return fs.createReadStream(file).pipe(res);
+    }
+    // inline view: only types a browser can show safely (content already verified by magic bytes at upload)
+    const type = VIEW_TYPES[ext];
+    if (!type) return send(415, { error: 'پیش‌نمایش این نوع فایل ممکن نیست' });
+    if (VIEW_BY_FETCH.includes(ext) && req.headers['x-viewer'] !== '1') return send(400, { error: 'این فایل فقط از داخل سامانه قابل مشاهده است' });
+    const head = { 'Content-Type': type, 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'SAMEORIGIN',
+      'Accept-Ranges': 'bytes' };
+    // no Content-Disposition on pdf/docx: Chrome turns such a fetch() into an empty 204 (treated as a download)
+    if (!VIEW_BY_FETCH.includes(ext)) head['Content-Disposition'] = `inline; filename*=UTF-8''${encodeURIComponent(f.name)}`;
+    const m = /^bytes=(\d*)-(\d*)$/.exec(String(req.headers.range || '')); // lets videos seek
+    if (m && (m[1] || m[2])) {
+      let start = m[1] ? Number(m[1]) : f.size - Number(m[2]), end = m[1] && m[2] ? Number(m[2]) : f.size - 1;
+      end = Math.min(end, f.size - 1);
+      if (!(start >= 0 && start <= end)) { res.writeHead(416, { 'Content-Range': `bytes */${f.size}` }); return res.end(); }
+      res.writeHead(206, { ...head, 'Content-Range': `bytes ${start}-${end}/${f.size}`, 'Content-Length': end - start + 1 });
+      return fs.createReadStream(file, { start, end }).pipe(res);
+    }
+    res.writeHead(200, { ...head, 'Content-Length': f.size });
+    return fs.createReadStream(file).pipe(res);
   }
 
   return send(404, { error: 'پیدا نشد' });
