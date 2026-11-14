@@ -1,0 +1,5058 @@
+{
+ "meta": {
+  "max_points": 4524,
+  "tolerance": 1e-09
+ },
+ "vectors": [
+  {
+   "name": "ALL_YES",
+   "description_fa": "همه‌ی سؤال‌ها «بله»",
+   "rule": {
+    "default": "YES"
+   },
+   "expected": {
+    "overall": {
+     "points": 4524,
+     "max_points": 4524,
+     "percent": 100.0
+    },
+    "indicators": {
+     "IND-01": {
+      "points": 312,
+      "max_points": 312,
+      "percent": 100.0
+     },
+     "IND-02": {
+      "points": 402,
+      "max_points": 402,
+      "percent": 100.0
+     },
+     "IND-03": {
+      "points": 486,
+      "max_points": 486,
+      "percent": 100.0
+     },
+     "IND-04": {
+      "points": 513,
+      "max_points": 513,
+      "percent": 100.0
+     },
+     "IND-05": {
+      "points": 219,
+      "max_points": 219,
+      "percent": 100.0
+     },
+     "IND-06": {
+      "points": 336,
+      "max_points": 336,
+      "percent": 100.0
+     },
+     "IND-07": {
+      "points": 315,
+      "max_points": 315,
+      "percent": 100.0
+     },
+     "IND-08": {
+      "points": 270,
+      "max_points": 270,
+      "percent": 100.0
+     },
+     "IND-09": {
+      "points": 261,
+      "max_points": 261,
+      "percent": 100.0
+     },
+     "IND-10": {
+      "points": 522,
+      "max_points": 522,
+      "percent": 100.0
+     },
+     "IND-11": {
+      "points": 471,
+      "max_points": 471,
+      "percent": 100.0
+     },
+     "IND-12": {
+      "points": 237,
+      "max_points": 237,
+      "percent": 100.0
+     },
+     "IND-13": {
+      "points": 180,
+      "max_points": 180,
+      "percent": 100.0
+     }
+    },
+    "sub_indicators": {
+     "IND-01-S01": {
+      "points": 54,
+      "max_points": 54,
+      "percent": 100.0
+     },
+     "IND-01-S02": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-01-S03": {
+      "points": 81,
+      "max_points": 81,
+      "percent": 100.0
+     },
+     "IND-01-S04": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-01-S05": {
+      "points": 57,
+      "max_points": 57,
+      "percent": 100.0
+     },
+     "IND-01-S06": {
+      "points": 42,
+      "max_points": 42,
+      "percent": 100.0
+     },
+     "IND-01-S07": {
+      "points": 12,
+      "max_points": 12,
+      "percent": 100.0
+     },
+     "IND-02-S01": {
+      "points": 21,
+      "max_points": 21,
+      "percent": 100.0
+     },
+     "IND-02-S02": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-02-S03": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-02-S04": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-02-S05": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-02-S06": {
+      "points": 33,
+      "max_points": 33,
+      "percent": 100.0
+     },
+     "IND-02-S07": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-02-S08": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-02-S09": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-02-S10": {
+      "points": 57,
+      "max_points": 57,
+      "percent": 100.0
+     },
+     "IND-02-S11": {
+      "points": 21,
+      "max_points": 21,
+      "percent": 100.0
+     },
+     "IND-02-S12": {
+      "points": 15,
+      "max_points": 15,
+      "percent": 100.0
+     },
+     "IND-02-S13": {
+      "points": 21,
+      "max_points": 21,
+      "percent": 100.0
+     },
+     "IND-02-S14": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-02-S15": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-02-S16": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-03-S01": {
+      "points": 63,
+      "max_points": 63,
+      "percent": 100.0
+     },
+     "IND-03-S02": {
+      "points": 57,
+      "max_points": 57,
+      "percent": 100.0
+     },
+     "IND-03-S03": {
+      "points": 42,
+      "max_points": 42,
+      "percent": 100.0
+     },
+     "IND-03-S04": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-03-S05": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-03-S06": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-03-S07": {
+      "points": 39,
+      "max_points": 39,
+      "percent": 100.0
+     },
+     "IND-03-S08": {
+      "points": 81,
+      "max_points": 81,
+      "percent": 100.0
+     },
+     "IND-03-S09": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-03-S10": {
+      "points": 93,
+      "max_points": 93,
+      "percent": 100.0
+     },
+     "IND-03-S11": {
+      "points": 15,
+      "max_points": 15,
+      "percent": 100.0
+     },
+     "IND-04-S01": {
+      "points": 54,
+      "max_points": 54,
+      "percent": 100.0
+     },
+     "IND-04-S02": {
+      "points": 63,
+      "max_points": 63,
+      "percent": 100.0
+     },
+     "IND-04-S03": {
+      "points": 81,
+      "max_points": 81,
+      "percent": 100.0
+     },
+     "IND-04-S04": {
+      "points": 69,
+      "max_points": 69,
+      "percent": 100.0
+     },
+     "IND-04-S05": {
+      "points": 99,
+      "max_points": 99,
+      "percent": 100.0
+     },
+     "IND-04-S06": {
+      "points": 54,
+      "max_points": 54,
+      "percent": 100.0
+     },
+     "IND-04-S07": {
+      "points": 33,
+      "max_points": 33,
+      "percent": 100.0
+     },
+     "IND-04-S08": {
+      "points": 45,
+      "max_points": 45,
+      "percent": 100.0
+     },
+     "IND-04-S09": {
+      "points": 15,
+      "max_points": 15,
+      "percent": 100.0
+     },
+     "IND-05-S01": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-05-S02": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-05-S03": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-05-S04": {
+      "points": 33,
+      "max_points": 33,
+      "percent": 100.0
+     },
+     "IND-05-S05": {
+      "points": 12,
+      "max_points": 12,
+      "percent": 100.0
+     },
+     "IND-05-S06": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-05-S07": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-05-S08": {
+      "points": 6,
+      "max_points": 6,
+      "percent": 100.0
+     },
+     "IND-05-S09": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-06-S01": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-06-S02": {
+      "points": 60,
+      "max_points": 60,
+      "percent": 100.0
+     },
+     "IND-06-S03": {
+      "points": 12,
+      "max_points": 12,
+      "percent": 100.0
+     },
+     "IND-06-S04": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-06-S05": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-06-S06": {
+      "points": 78,
+      "max_points": 78,
+      "percent": 100.0
+     },
+     "IND-06-S07": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-06-S08": {
+      "points": 48,
+      "max_points": 48,
+      "percent": 100.0
+     },
+     "IND-06-S09": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-07-S01": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-07-S02": {
+      "points": 84,
+      "max_points": 84,
+      "percent": 100.0
+     },
+     "IND-07-S03": {
+      "points": 132,
+      "max_points": 132,
+      "percent": 100.0
+     },
+     "IND-07-S04": {
+      "points": 63,
+      "max_points": 63,
+      "percent": 100.0
+     },
+     "IND-08-S01": {
+      "points": 45,
+      "max_points": 45,
+      "percent": 100.0
+     },
+     "IND-08-S02": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-08-S03": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-08-S04": {
+      "points": 9,
+      "max_points": 9,
+      "percent": 100.0
+     },
+     "IND-08-S05": {
+      "points": 9,
+      "max_points": 9,
+      "percent": 100.0
+     },
+     "IND-08-S06": {
+      "points": 9,
+      "max_points": 9,
+      "percent": 100.0
+     },
+     "IND-08-S07": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-08-S08": {
+      "points": 15,
+      "max_points": 15,
+      "percent": 100.0
+     },
+     "IND-08-S09": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-08-S10": {
+      "points": 6,
+      "max_points": 6,
+      "percent": 100.0
+     },
+     "IND-08-S11": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-08-S12": {
+      "points": 12,
+      "max_points": 12,
+      "percent": 100.0
+     },
+     "IND-08-S13": {
+      "points": 6,
+      "max_points": 6,
+      "percent": 100.0
+     },
+     "IND-08-S14": {
+      "points": 33,
+      "max_points": 33,
+      "percent": 100.0
+     },
+     "IND-09-S01": {
+      "points": 57,
+      "max_points": 57,
+      "percent": 100.0
+     },
+     "IND-09-S02": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-09-S03": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-09-S04": {
+      "points": 90,
+      "max_points": 90,
+      "percent": 100.0
+     },
+     "IND-09-S05": {
+      "points": 54,
+      "max_points": 54,
+      "percent": 100.0
+     },
+     "IND-10-S01": {
+      "points": 93,
+      "max_points": 93,
+      "percent": 100.0
+     },
+     "IND-10-S02": {
+      "points": 123,
+      "max_points": 123,
+      "percent": 100.0
+     },
+     "IND-10-S03": {
+      "points": 78,
+      "max_points": 78,
+      "percent": 100.0
+     },
+     "IND-10-S04": {
+      "points": 60,
+      "max_points": 60,
+      "percent": 100.0
+     },
+     "IND-10-S05": {
+      "points": 51,
+      "max_points": 51,
+      "percent": 100.0
+     },
+     "IND-10-S06": {
+      "points": 33,
+      "max_points": 33,
+      "percent": 100.0
+     },
+     "IND-10-S07": {
+      "points": 42,
+      "max_points": 42,
+      "percent": 100.0
+     },
+     "IND-10-S08": {
+      "points": 42,
+      "max_points": 42,
+      "percent": 100.0
+     },
+     "IND-11-S01": {
+      "points": 99,
+      "max_points": 99,
+      "percent": 100.0
+     },
+     "IND-11-S02": {
+      "points": 96,
+      "max_points": 96,
+      "percent": 100.0
+     },
+     "IND-11-S03": {
+      "points": 87,
+      "max_points": 87,
+      "percent": 100.0
+     },
+     "IND-11-S04": {
+      "points": 45,
+      "max_points": 45,
+      "percent": 100.0
+     },
+     "IND-11-S05": {
+      "points": 54,
+      "max_points": 54,
+      "percent": 100.0
+     },
+     "IND-11-S06": {
+      "points": 51,
+      "max_points": 51,
+      "percent": 100.0
+     },
+     "IND-11-S07": {
+      "points": 39,
+      "max_points": 39,
+      "percent": 100.0
+     },
+     "IND-12-S01": {
+      "points": 81,
+      "max_points": 81,
+      "percent": 100.0
+     },
+     "IND-12-S02": {
+      "points": 54,
+      "max_points": 54,
+      "percent": 100.0
+     },
+     "IND-12-S03": {
+      "points": 75,
+      "max_points": 75,
+      "percent": 100.0
+     },
+     "IND-12-S04": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-13-S01": {
+      "points": 51,
+      "max_points": 51,
+      "percent": 100.0
+     },
+     "IND-13-S02": {
+      "points": 33,
+      "max_points": 33,
+      "percent": 100.0
+     },
+     "IND-13-S03": {
+      "points": 39,
+      "max_points": 39,
+      "percent": 100.0
+     },
+     "IND-13-S04": {
+      "points": 33,
+      "max_points": 33,
+      "percent": 100.0
+     },
+     "IND-13-S05": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     }
+    }
+   }
+  },
+  {
+   "name": "ALL_CORRECTIVE",
+   "description_fa": "همه‌ی سؤال‌ها «اقدام اصلاحی»",
+   "rule": {
+    "default": "CORRECTIVE"
+   },
+   "expected": {
+    "overall": {
+     "points": 1508,
+     "max_points": 4524,
+     "percent": 33.333333333333336
+    },
+    "indicators": {
+     "IND-01": {
+      "points": 104,
+      "max_points": 312,
+      "percent": 33.333333333333336
+     },
+     "IND-02": {
+      "points": 134,
+      "max_points": 402,
+      "percent": 33.333333333333336
+     },
+     "IND-03": {
+      "points": 162,
+      "max_points": 486,
+      "percent": 33.333333333333336
+     },
+     "IND-04": {
+      "points": 171,
+      "max_points": 513,
+      "percent": 33.333333333333336
+     },
+     "IND-05": {
+      "points": 73,
+      "max_points": 219,
+      "percent": 33.333333333333336
+     },
+     "IND-06": {
+      "points": 112,
+      "max_points": 336,
+      "percent": 33.333333333333336
+     },
+     "IND-07": {
+      "points": 105,
+      "max_points": 315,
+      "percent": 33.333333333333336
+     },
+     "IND-08": {
+      "points": 90,
+      "max_points": 270,
+      "percent": 33.333333333333336
+     },
+     "IND-09": {
+      "points": 87,
+      "max_points": 261,
+      "percent": 33.333333333333336
+     },
+     "IND-10": {
+      "points": 174,
+      "max_points": 522,
+      "percent": 33.333333333333336
+     },
+     "IND-11": {
+      "points": 157,
+      "max_points": 471,
+      "percent": 33.333333333333336
+     },
+     "IND-12": {
+      "points": 79,
+      "max_points": 237,
+      "percent": 33.333333333333336
+     },
+     "IND-13": {
+      "points": 60,
+      "max_points": 180,
+      "percent": 33.333333333333336
+     }
+    },
+    "sub_indicators": {
+     "IND-01-S01": {
+      "points": 18,
+      "max_points": 54,
+      "percent": 33.333333333333336
+     },
+     "IND-01-S02": {
+      "points": 10,
+      "max_points": 30,
+      "percent": 33.333333333333336
+     },
+     "IND-01-S03": {
+      "points": 27,
+      "max_points": 81,
+      "percent": 33.333333333333336
+     },
+     "IND-01-S04": {
+      "points": 12,
+      "max_points": 36,
+      "percent": 33.333333333333336
+     },
+     "IND-01-S05": {
+      "points": 19,
+      "max_points": 57,
+      "percent": 33.333333333333336
+     },
+     "IND-01-S06": {
+      "points": 14,
+      "max_points": 42,
+      "percent": 33.333333333333336
+     },
+     "IND-01-S07": {
+      "points": 4,
+      "max_points": 12,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S01": {
+      "points": 7,
+      "max_points": 21,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S02": {
+      "points": 9,
+      "max_points": 27,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S03": {
+      "points": 6,
+      "max_points": 18,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S04": {
+      "points": 12,
+      "max_points": 36,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S05": {
+      "points": 6,
+      "max_points": 18,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S06": {
+      "points": 11,
+      "max_points": 33,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S07": {
+      "points": 9,
+      "max_points": 27,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S08": {
+      "points": 8,
+      "max_points": 24,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S09": {
+      "points": 6,
+      "max_points": 18,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S10": {
+      "points": 19,
+      "max_points": 57,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S11": {
+      "points": 7,
+      "max_points": 21,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S12": {
+      "points": 5,
+      "max_points": 15,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S13": {
+      "points": 7,
+      "max_points": 21,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S14": {
+      "points": 6,
+      "max_points": 18,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S15": {
+      "points": 10,
+      "max_points": 30,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S16": {
+      "points": 6,
+      "max_points": 18,
+      "percent": 33.333333333333336
+     },
+     "IND-03-S01": {
+      "points": 21,
+      "max_points": 63,
+      "percent": 33.333333333333336
+     },
+     "IND-03-S02": {
+      "points": 19,
+      "max_points": 57,
+      "percent": 33.333333333333336
+     },
+     "IND-03-S03": {
+      "points": 14,
+      "max_points": 42,
+      "percent": 33.333333333333336
+     },
+     "IND-03-S04": {
+      "points": 8,
+      "max_points": 24,
+      "percent": 33.333333333333336
+     },
+     "IND-03-S05": {
+      "points": 6,
+      "max_points": 18,
+      "percent": 33.333333333333336
+     },
+     "IND-03-S06": {
+      "points": 12,
+      "max_points": 36,
+      "percent": 33.333333333333336
+     },
+     "IND-03-S07": {
+      "points": 13,
+      "max_points": 39,
+      "percent": 33.333333333333336
+     },
+     "IND-03-S08": {
+      "points": 27,
+      "max_points": 81,
+      "percent": 33.333333333333336
+     },
+     "IND-03-S09": {
+      "points": 6,
+      "max_points": 18,
+      "percent": 33.333333333333336
+     },
+     "IND-03-S10": {
+      "points": 31,
+      "max_points": 93,
+      "percent": 33.333333333333336
+     },
+     "IND-03-S11": {
+      "points": 5,
+      "max_points": 15,
+      "percent": 33.333333333333336
+     },
+     "IND-04-S01": {
+      "points": 18,
+      "max_points": 54,
+      "percent": 33.333333333333336
+     },
+     "IND-04-S02": {
+      "points": 21,
+      "max_points": 63,
+      "percent": 33.333333333333336
+     },
+     "IND-04-S03": {
+      "points": 27,
+      "max_points": 81,
+      "percent": 33.333333333333336
+     },
+     "IND-04-S04": {
+      "points": 23,
+      "max_points": 69,
+      "percent": 33.333333333333336
+     },
+     "IND-04-S05": {
+      "points": 33,
+      "max_points": 99,
+      "percent": 33.333333333333336
+     },
+     "IND-04-S06": {
+      "points": 18,
+      "max_points": 54,
+      "percent": 33.333333333333336
+     },
+     "IND-04-S07": {
+      "points": 11,
+      "max_points": 33,
+      "percent": 33.333333333333336
+     },
+     "IND-04-S08": {
+      "points": 15,
+      "max_points": 45,
+      "percent": 33.333333333333336
+     },
+     "IND-04-S09": {
+      "points": 5,
+      "max_points": 15,
+      "percent": 33.333333333333336
+     },
+     "IND-05-S01": {
+      "points": 8,
+      "max_points": 24,
+      "percent": 33.333333333333336
+     },
+     "IND-05-S02": {
+      "points": 12,
+      "max_points": 36,
+      "percent": 33.333333333333336
+     },
+     "IND-05-S03": {
+      "points": 8,
+      "max_points": 24,
+      "percent": 33.333333333333336
+     },
+     "IND-05-S04": {
+      "points": 11,
+      "max_points": 33,
+      "percent": 33.333333333333336
+     },
+     "IND-05-S05": {
+      "points": 4,
+      "max_points": 12,
+      "percent": 33.333333333333336
+     },
+     "IND-05-S06": {
+      "points": 10,
+      "max_points": 30,
+      "percent": 33.333333333333336
+     },
+     "IND-05-S07": {
+      "points": 9,
+      "max_points": 27,
+      "percent": 33.333333333333336
+     },
+     "IND-05-S08": {
+      "points": 2,
+      "max_points": 6,
+      "percent": 33.333333333333336
+     },
+     "IND-05-S09": {
+      "points": 9,
+      "max_points": 27,
+      "percent": 33.333333333333336
+     },
+     "IND-06-S01": {
+      "points": 9,
+      "max_points": 27,
+      "percent": 33.333333333333336
+     },
+     "IND-06-S02": {
+      "points": 20,
+      "max_points": 60,
+      "percent": 33.333333333333336
+     },
+     "IND-06-S03": {
+      "points": 4,
+      "max_points": 12,
+      "percent": 33.333333333333336
+     },
+     "IND-06-S04": {
+      "points": 9,
+      "max_points": 27,
+      "percent": 33.333333333333336
+     },
+     "IND-06-S05": {
+      "points": 10,
+      "max_points": 30,
+      "percent": 33.333333333333336
+     },
+     "IND-06-S06": {
+      "points": 26,
+      "max_points": 78,
+      "percent": 33.333333333333336
+     },
+     "IND-06-S07": {
+      "points": 8,
+      "max_points": 24,
+      "percent": 33.333333333333336
+     },
+     "IND-06-S08": {
+      "points": 16,
+      "max_points": 48,
+      "percent": 33.333333333333336
+     },
+     "IND-06-S09": {
+      "points": 10,
+      "max_points": 30,
+      "percent": 33.333333333333336
+     },
+     "IND-07-S01": {
+      "points": 12,
+      "max_points": 36,
+      "percent": 33.333333333333336
+     },
+     "IND-07-S02": {
+      "points": 28,
+      "max_points": 84,
+      "percent": 33.333333333333336
+     },
+     "IND-07-S03": {
+      "points": 44,
+      "max_points": 132,
+      "percent": 33.333333333333336
+     },
+     "IND-07-S04": {
+      "points": 21,
+      "max_points": 63,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S01": {
+      "points": 15,
+      "max_points": 45,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S02": {
+      "points": 10,
+      "max_points": 30,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S03": {
+      "points": 6,
+      "max_points": 18,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S04": {
+      "points": 3,
+      "max_points": 9,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S05": {
+      "points": 3,
+      "max_points": 9,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S06": {
+      "points": 3,
+      "max_points": 9,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S07": {
+      "points": 10,
+      "max_points": 30,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S08": {
+      "points": 5,
+      "max_points": 15,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S09": {
+      "points": 8,
+      "max_points": 24,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S10": {
+      "points": 2,
+      "max_points": 6,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S11": {
+      "points": 8,
+      "max_points": 24,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S12": {
+      "points": 4,
+      "max_points": 12,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S13": {
+      "points": 2,
+      "max_points": 6,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S14": {
+      "points": 11,
+      "max_points": 33,
+      "percent": 33.333333333333336
+     },
+     "IND-09-S01": {
+      "points": 19,
+      "max_points": 57,
+      "percent": 33.333333333333336
+     },
+     "IND-09-S02": {
+      "points": 8,
+      "max_points": 24,
+      "percent": 33.333333333333336
+     },
+     "IND-09-S03": {
+      "points": 12,
+      "max_points": 36,
+      "percent": 33.333333333333336
+     },
+     "IND-09-S04": {
+      "points": 30,
+      "max_points": 90,
+      "percent": 33.333333333333336
+     },
+     "IND-09-S05": {
+      "points": 18,
+      "max_points": 54,
+      "percent": 33.333333333333336
+     },
+     "IND-10-S01": {
+      "points": 31,
+      "max_points": 93,
+      "percent": 33.333333333333336
+     },
+     "IND-10-S02": {
+      "points": 41,
+      "max_points": 123,
+      "percent": 33.333333333333336
+     },
+     "IND-10-S03": {
+      "points": 26,
+      "max_points": 78,
+      "percent": 33.333333333333336
+     },
+     "IND-10-S04": {
+      "points": 20,
+      "max_points": 60,
+      "percent": 33.333333333333336
+     },
+     "IND-10-S05": {
+      "points": 17,
+      "max_points": 51,
+      "percent": 33.333333333333336
+     },
+     "IND-10-S06": {
+      "points": 11,
+      "max_points": 33,
+      "percent": 33.333333333333336
+     },
+     "IND-10-S07": {
+      "points": 14,
+      "max_points": 42,
+      "percent": 33.333333333333336
+     },
+     "IND-10-S08": {
+      "points": 14,
+      "max_points": 42,
+      "percent": 33.333333333333336
+     },
+     "IND-11-S01": {
+      "points": 33,
+      "max_points": 99,
+      "percent": 33.333333333333336
+     },
+     "IND-11-S02": {
+      "points": 32,
+      "max_points": 96,
+      "percent": 33.333333333333336
+     },
+     "IND-11-S03": {
+      "points": 29,
+      "max_points": 87,
+      "percent": 33.333333333333336
+     },
+     "IND-11-S04": {
+      "points": 15,
+      "max_points": 45,
+      "percent": 33.333333333333336
+     },
+     "IND-11-S05": {
+      "points": 18,
+      "max_points": 54,
+      "percent": 33.333333333333336
+     },
+     "IND-11-S06": {
+      "points": 17,
+      "max_points": 51,
+      "percent": 33.333333333333336
+     },
+     "IND-11-S07": {
+      "points": 13,
+      "max_points": 39,
+      "percent": 33.333333333333336
+     },
+     "IND-12-S01": {
+      "points": 27,
+      "max_points": 81,
+      "percent": 33.333333333333336
+     },
+     "IND-12-S02": {
+      "points": 18,
+      "max_points": 54,
+      "percent": 33.333333333333336
+     },
+     "IND-12-S03": {
+      "points": 25,
+      "max_points": 75,
+      "percent": 33.333333333333336
+     },
+     "IND-12-S04": {
+      "points": 9,
+      "max_points": 27,
+      "percent": 33.333333333333336
+     },
+     "IND-13-S01": {
+      "points": 17,
+      "max_points": 51,
+      "percent": 33.333333333333336
+     },
+     "IND-13-S02": {
+      "points": 11,
+      "max_points": 33,
+      "percent": 33.333333333333336
+     },
+     "IND-13-S03": {
+      "points": 13,
+      "max_points": 39,
+      "percent": 33.333333333333336
+     },
+     "IND-13-S04": {
+      "points": 11,
+      "max_points": 33,
+      "percent": 33.333333333333336
+     },
+     "IND-13-S05": {
+      "points": 8,
+      "max_points": 24,
+      "percent": 33.333333333333336
+     }
+    }
+   }
+  },
+  {
+   "name": "ALL_NO",
+   "description_fa": "همه‌ی سؤال‌ها «خیر»",
+   "rule": {
+    "default": "NO"
+   },
+   "expected": {
+    "overall": {
+     "points": 0,
+     "max_points": 4524,
+     "percent": 0.0
+    },
+    "indicators": {
+     "IND-01": {
+      "points": 0,
+      "max_points": 312,
+      "percent": 0.0
+     },
+     "IND-02": {
+      "points": 0,
+      "max_points": 402,
+      "percent": 0.0
+     },
+     "IND-03": {
+      "points": 0,
+      "max_points": 486,
+      "percent": 0.0
+     },
+     "IND-04": {
+      "points": 0,
+      "max_points": 513,
+      "percent": 0.0
+     },
+     "IND-05": {
+      "points": 0,
+      "max_points": 219,
+      "percent": 0.0
+     },
+     "IND-06": {
+      "points": 0,
+      "max_points": 336,
+      "percent": 0.0
+     },
+     "IND-07": {
+      "points": 0,
+      "max_points": 315,
+      "percent": 0.0
+     },
+     "IND-08": {
+      "points": 0,
+      "max_points": 270,
+      "percent": 0.0
+     },
+     "IND-09": {
+      "points": 0,
+      "max_points": 261,
+      "percent": 0.0
+     },
+     "IND-10": {
+      "points": 0,
+      "max_points": 522,
+      "percent": 0.0
+     },
+     "IND-11": {
+      "points": 0,
+      "max_points": 471,
+      "percent": 0.0
+     },
+     "IND-12": {
+      "points": 0,
+      "max_points": 237,
+      "percent": 0.0
+     },
+     "IND-13": {
+      "points": 0,
+      "max_points": 180,
+      "percent": 0.0
+     }
+    },
+    "sub_indicators": {
+     "IND-01-S01": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-01-S02": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-01-S03": {
+      "points": 0,
+      "max_points": 81,
+      "percent": 0.0
+     },
+     "IND-01-S04": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-01-S05": {
+      "points": 0,
+      "max_points": 57,
+      "percent": 0.0
+     },
+     "IND-01-S06": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-01-S07": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-02-S01": {
+      "points": 0,
+      "max_points": 21,
+      "percent": 0.0
+     },
+     "IND-02-S02": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-02-S03": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S04": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-02-S05": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S06": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-02-S07": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-02-S08": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-02-S09": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S10": {
+      "points": 0,
+      "max_points": 57,
+      "percent": 0.0
+     },
+     "IND-02-S11": {
+      "points": 0,
+      "max_points": 21,
+      "percent": 0.0
+     },
+     "IND-02-S12": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-02-S13": {
+      "points": 0,
+      "max_points": 21,
+      "percent": 0.0
+     },
+     "IND-02-S14": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S15": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-02-S16": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-03-S01": {
+      "points": 0,
+      "max_points": 63,
+      "percent": 0.0
+     },
+     "IND-03-S02": {
+      "points": 0,
+      "max_points": 57,
+      "percent": 0.0
+     },
+     "IND-03-S03": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-03-S04": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-03-S05": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-03-S06": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-03-S07": {
+      "points": 0,
+      "max_points": 39,
+      "percent": 0.0
+     },
+     "IND-03-S08": {
+      "points": 0,
+      "max_points": 81,
+      "percent": 0.0
+     },
+     "IND-03-S09": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-03-S10": {
+      "points": 0,
+      "max_points": 93,
+      "percent": 0.0
+     },
+     "IND-03-S11": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-04-S01": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-04-S02": {
+      "points": 0,
+      "max_points": 63,
+      "percent": 0.0
+     },
+     "IND-04-S03": {
+      "points": 0,
+      "max_points": 81,
+      "percent": 0.0
+     },
+     "IND-04-S04": {
+      "points": 0,
+      "max_points": 69,
+      "percent": 0.0
+     },
+     "IND-04-S05": {
+      "points": 0,
+      "max_points": 99,
+      "percent": 0.0
+     },
+     "IND-04-S06": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-04-S07": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-04-S08": {
+      "points": 0,
+      "max_points": 45,
+      "percent": 0.0
+     },
+     "IND-04-S09": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-05-S01": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-05-S02": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-05-S03": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-05-S04": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-05-S05": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-05-S06": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-05-S07": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-05-S08": {
+      "points": 0,
+      "max_points": 6,
+      "percent": 0.0
+     },
+     "IND-05-S09": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-06-S01": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-06-S02": {
+      "points": 0,
+      "max_points": 60,
+      "percent": 0.0
+     },
+     "IND-06-S03": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-06-S04": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-06-S05": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-06-S06": {
+      "points": 0,
+      "max_points": 78,
+      "percent": 0.0
+     },
+     "IND-06-S07": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-06-S08": {
+      "points": 0,
+      "max_points": 48,
+      "percent": 0.0
+     },
+     "IND-06-S09": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-07-S01": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-07-S02": {
+      "points": 0,
+      "max_points": 84,
+      "percent": 0.0
+     },
+     "IND-07-S03": {
+      "points": 0,
+      "max_points": 132,
+      "percent": 0.0
+     },
+     "IND-07-S04": {
+      "points": 0,
+      "max_points": 63,
+      "percent": 0.0
+     },
+     "IND-08-S01": {
+      "points": 0,
+      "max_points": 45,
+      "percent": 0.0
+     },
+     "IND-08-S02": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-08-S03": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-08-S04": {
+      "points": 0,
+      "max_points": 9,
+      "percent": 0.0
+     },
+     "IND-08-S05": {
+      "points": 0,
+      "max_points": 9,
+      "percent": 0.0
+     },
+     "IND-08-S06": {
+      "points": 0,
+      "max_points": 9,
+      "percent": 0.0
+     },
+     "IND-08-S07": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-08-S08": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-08-S09": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-08-S10": {
+      "points": 0,
+      "max_points": 6,
+      "percent": 0.0
+     },
+     "IND-08-S11": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-08-S12": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-08-S13": {
+      "points": 0,
+      "max_points": 6,
+      "percent": 0.0
+     },
+     "IND-08-S14": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-09-S01": {
+      "points": 0,
+      "max_points": 57,
+      "percent": 0.0
+     },
+     "IND-09-S02": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-09-S03": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-09-S04": {
+      "points": 0,
+      "max_points": 90,
+      "percent": 0.0
+     },
+     "IND-09-S05": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-10-S01": {
+      "points": 0,
+      "max_points": 93,
+      "percent": 0.0
+     },
+     "IND-10-S02": {
+      "points": 0,
+      "max_points": 123,
+      "percent": 0.0
+     },
+     "IND-10-S03": {
+      "points": 0,
+      "max_points": 78,
+      "percent": 0.0
+     },
+     "IND-10-S04": {
+      "points": 0,
+      "max_points": 60,
+      "percent": 0.0
+     },
+     "IND-10-S05": {
+      "points": 0,
+      "max_points": 51,
+      "percent": 0.0
+     },
+     "IND-10-S06": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-10-S07": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-10-S08": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-11-S01": {
+      "points": 0,
+      "max_points": 99,
+      "percent": 0.0
+     },
+     "IND-11-S02": {
+      "points": 0,
+      "max_points": 96,
+      "percent": 0.0
+     },
+     "IND-11-S03": {
+      "points": 0,
+      "max_points": 87,
+      "percent": 0.0
+     },
+     "IND-11-S04": {
+      "points": 0,
+      "max_points": 45,
+      "percent": 0.0
+     },
+     "IND-11-S05": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-11-S06": {
+      "points": 0,
+      "max_points": 51,
+      "percent": 0.0
+     },
+     "IND-11-S07": {
+      "points": 0,
+      "max_points": 39,
+      "percent": 0.0
+     },
+     "IND-12-S01": {
+      "points": 0,
+      "max_points": 81,
+      "percent": 0.0
+     },
+     "IND-12-S02": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-12-S03": {
+      "points": 0,
+      "max_points": 75,
+      "percent": 0.0
+     },
+     "IND-12-S04": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-13-S01": {
+      "points": 0,
+      "max_points": 51,
+      "percent": 0.0
+     },
+     "IND-13-S02": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-13-S03": {
+      "points": 0,
+      "max_points": 39,
+      "percent": 0.0
+     },
+     "IND-13-S04": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-13-S05": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     }
+    }
+   }
+  },
+  {
+   "name": "CRITICAL_NO_REST_YES",
+   "description_fa": "همه‌ی سؤال‌های بحرانی (priority=3) «خیر» و بقیه «بله»",
+   "rule": {
+    "priority_3": "NO",
+    "otherwise": "YES"
+   },
+   "expected": {
+    "overall": {
+     "points": 3462,
+     "max_points": 4524,
+     "percent": 76.52519893899205
+    },
+    "indicators": {
+     "IND-01": {
+      "points": 177,
+      "max_points": 312,
+      "percent": 56.73076923076923
+     },
+     "IND-02": {
+      "points": 240,
+      "max_points": 402,
+      "percent": 59.701492537313435
+     },
+     "IND-03": {
+      "points": 396,
+      "max_points": 486,
+      "percent": 81.48148148148148
+     },
+     "IND-04": {
+      "points": 432,
+      "max_points": 513,
+      "percent": 84.21052631578948
+     },
+     "IND-05": {
+      "points": 219,
+      "max_points": 219,
+      "percent": 100.0
+     },
+     "IND-06": {
+      "points": 138,
+      "max_points": 336,
+      "percent": 41.07142857142857
+     },
+     "IND-07": {
+      "points": 243,
+      "max_points": 315,
+      "percent": 77.14285714285714
+     },
+     "IND-08": {
+      "points": 225,
+      "max_points": 270,
+      "percent": 83.33333333333333
+     },
+     "IND-09": {
+      "points": 207,
+      "max_points": 261,
+      "percent": 79.3103448275862
+     },
+     "IND-10": {
+      "points": 441,
+      "max_points": 522,
+      "percent": 84.48275862068965
+     },
+     "IND-11": {
+      "points": 471,
+      "max_points": 471,
+      "percent": 100.0
+     },
+     "IND-12": {
+      "points": 156,
+      "max_points": 237,
+      "percent": 65.82278481012658
+     },
+     "IND-13": {
+      "points": 117,
+      "max_points": 180,
+      "percent": 65.0
+     }
+    },
+    "sub_indicators": {
+     "IND-01-S01": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-01-S02": {
+      "points": 12,
+      "max_points": 30,
+      "percent": 40.0
+     },
+     "IND-01-S03": {
+      "points": 36,
+      "max_points": 81,
+      "percent": 44.44444444444444
+     },
+     "IND-01-S04": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-01-S05": {
+      "points": 39,
+      "max_points": 57,
+      "percent": 68.42105263157895
+     },
+     "IND-01-S06": {
+      "points": 42,
+      "max_points": 42,
+      "percent": 100.0
+     },
+     "IND-01-S07": {
+      "points": 12,
+      "max_points": 12,
+      "percent": 100.0
+     },
+     "IND-02-S01": {
+      "points": 21,
+      "max_points": 21,
+      "percent": 100.0
+     },
+     "IND-02-S02": {
+      "points": 18,
+      "max_points": 27,
+      "percent": 66.66666666666667
+     },
+     "IND-02-S03": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-02-S04": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-02-S05": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S06": {
+      "points": 24,
+      "max_points": 33,
+      "percent": 72.72727272727273
+     },
+     "IND-02-S07": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-02-S08": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-02-S09": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-02-S10": {
+      "points": 30,
+      "max_points": 57,
+      "percent": 52.63157894736842
+     },
+     "IND-02-S11": {
+      "points": 12,
+      "max_points": 21,
+      "percent": 57.142857142857146
+     },
+     "IND-02-S12": {
+      "points": 15,
+      "max_points": 15,
+      "percent": 100.0
+     },
+     "IND-02-S13": {
+      "points": 12,
+      "max_points": 21,
+      "percent": 57.142857142857146
+     },
+     "IND-02-S14": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S15": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-02-S16": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-03-S01": {
+      "points": 18,
+      "max_points": 63,
+      "percent": 28.571428571428573
+     },
+     "IND-03-S02": {
+      "points": 30,
+      "max_points": 57,
+      "percent": 52.63157894736842
+     },
+     "IND-03-S03": {
+      "points": 42,
+      "max_points": 42,
+      "percent": 100.0
+     },
+     "IND-03-S04": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-03-S05": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-03-S06": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-03-S07": {
+      "points": 39,
+      "max_points": 39,
+      "percent": 100.0
+     },
+     "IND-03-S08": {
+      "points": 63,
+      "max_points": 81,
+      "percent": 77.77777777777777
+     },
+     "IND-03-S09": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-03-S10": {
+      "points": 93,
+      "max_points": 93,
+      "percent": 100.0
+     },
+     "IND-03-S11": {
+      "points": 15,
+      "max_points": 15,
+      "percent": 100.0
+     },
+     "IND-04-S01": {
+      "points": 18,
+      "max_points": 54,
+      "percent": 33.333333333333336
+     },
+     "IND-04-S02": {
+      "points": 54,
+      "max_points": 63,
+      "percent": 85.71428571428571
+     },
+     "IND-04-S03": {
+      "points": 81,
+      "max_points": 81,
+      "percent": 100.0
+     },
+     "IND-04-S04": {
+      "points": 69,
+      "max_points": 69,
+      "percent": 100.0
+     },
+     "IND-04-S05": {
+      "points": 72,
+      "max_points": 99,
+      "percent": 72.72727272727273
+     },
+     "IND-04-S06": {
+      "points": 45,
+      "max_points": 54,
+      "percent": 83.33333333333333
+     },
+     "IND-04-S07": {
+      "points": 33,
+      "max_points": 33,
+      "percent": 100.0
+     },
+     "IND-04-S08": {
+      "points": 45,
+      "max_points": 45,
+      "percent": 100.0
+     },
+     "IND-04-S09": {
+      "points": 15,
+      "max_points": 15,
+      "percent": 100.0
+     },
+     "IND-05-S01": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-05-S02": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-05-S03": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-05-S04": {
+      "points": 33,
+      "max_points": 33,
+      "percent": 100.0
+     },
+     "IND-05-S05": {
+      "points": 12,
+      "max_points": 12,
+      "percent": 100.0
+     },
+     "IND-05-S06": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-05-S07": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-05-S08": {
+      "points": 6,
+      "max_points": 6,
+      "percent": 100.0
+     },
+     "IND-05-S09": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-06-S01": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-06-S02": {
+      "points": 6,
+      "max_points": 60,
+      "percent": 10.0
+     },
+     "IND-06-S03": {
+      "points": 12,
+      "max_points": 12,
+      "percent": 100.0
+     },
+     "IND-06-S04": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-06-S05": {
+      "points": 12,
+      "max_points": 30,
+      "percent": 40.0
+     },
+     "IND-06-S06": {
+      "points": 60,
+      "max_points": 78,
+      "percent": 76.92307692307692
+     },
+     "IND-06-S07": {
+      "points": 6,
+      "max_points": 24,
+      "percent": 25.0
+     },
+     "IND-06-S08": {
+      "points": 12,
+      "max_points": 48,
+      "percent": 25.0
+     },
+     "IND-06-S09": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-07-S01": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-07-S02": {
+      "points": 66,
+      "max_points": 84,
+      "percent": 78.57142857142857
+     },
+     "IND-07-S03": {
+      "points": 78,
+      "max_points": 132,
+      "percent": 59.09090909090909
+     },
+     "IND-07-S04": {
+      "points": 63,
+      "max_points": 63,
+      "percent": 100.0
+     },
+     "IND-08-S01": {
+      "points": 18,
+      "max_points": 45,
+      "percent": 40.0
+     },
+     "IND-08-S02": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-08-S03": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-08-S04": {
+      "points": 9,
+      "max_points": 9,
+      "percent": 100.0
+     },
+     "IND-08-S05": {
+      "points": 9,
+      "max_points": 9,
+      "percent": 100.0
+     },
+     "IND-08-S06": {
+      "points": 9,
+      "max_points": 9,
+      "percent": 100.0
+     },
+     "IND-08-S07": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-08-S08": {
+      "points": 6,
+      "max_points": 15,
+      "percent": 40.0
+     },
+     "IND-08-S09": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-08-S10": {
+      "points": 6,
+      "max_points": 6,
+      "percent": 100.0
+     },
+     "IND-08-S11": {
+      "points": 15,
+      "max_points": 24,
+      "percent": 62.5
+     },
+     "IND-08-S12": {
+      "points": 12,
+      "max_points": 12,
+      "percent": 100.0
+     },
+     "IND-08-S13": {
+      "points": 6,
+      "max_points": 6,
+      "percent": 100.0
+     },
+     "IND-08-S14": {
+      "points": 33,
+      "max_points": 33,
+      "percent": 100.0
+     },
+     "IND-09-S01": {
+      "points": 30,
+      "max_points": 57,
+      "percent": 52.63157894736842
+     },
+     "IND-09-S02": {
+      "points": 15,
+      "max_points": 24,
+      "percent": 62.5
+     },
+     "IND-09-S03": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-09-S04": {
+      "points": 81,
+      "max_points": 90,
+      "percent": 90.0
+     },
+     "IND-09-S05": {
+      "points": 45,
+      "max_points": 54,
+      "percent": 83.33333333333333
+     },
+     "IND-10-S01": {
+      "points": 57,
+      "max_points": 93,
+      "percent": 61.29032258064516
+     },
+     "IND-10-S02": {
+      "points": 105,
+      "max_points": 123,
+      "percent": 85.36585365853658
+     },
+     "IND-10-S03": {
+      "points": 78,
+      "max_points": 78,
+      "percent": 100.0
+     },
+     "IND-10-S04": {
+      "points": 33,
+      "max_points": 60,
+      "percent": 55.0
+     },
+     "IND-10-S05": {
+      "points": 51,
+      "max_points": 51,
+      "percent": 100.0
+     },
+     "IND-10-S06": {
+      "points": 33,
+      "max_points": 33,
+      "percent": 100.0
+     },
+     "IND-10-S07": {
+      "points": 42,
+      "max_points": 42,
+      "percent": 100.0
+     },
+     "IND-10-S08": {
+      "points": 42,
+      "max_points": 42,
+      "percent": 100.0
+     },
+     "IND-11-S01": {
+      "points": 99,
+      "max_points": 99,
+      "percent": 100.0
+     },
+     "IND-11-S02": {
+      "points": 96,
+      "max_points": 96,
+      "percent": 100.0
+     },
+     "IND-11-S03": {
+      "points": 87,
+      "max_points": 87,
+      "percent": 100.0
+     },
+     "IND-11-S04": {
+      "points": 45,
+      "max_points": 45,
+      "percent": 100.0
+     },
+     "IND-11-S05": {
+      "points": 54,
+      "max_points": 54,
+      "percent": 100.0
+     },
+     "IND-11-S06": {
+      "points": 51,
+      "max_points": 51,
+      "percent": 100.0
+     },
+     "IND-11-S07": {
+      "points": 39,
+      "max_points": 39,
+      "percent": 100.0
+     },
+     "IND-12-S01": {
+      "points": 45,
+      "max_points": 81,
+      "percent": 55.55555555555556
+     },
+     "IND-12-S02": {
+      "points": 36,
+      "max_points": 54,
+      "percent": 66.66666666666667
+     },
+     "IND-12-S03": {
+      "points": 48,
+      "max_points": 75,
+      "percent": 64.0
+     },
+     "IND-12-S04": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-13-S01": {
+      "points": 24,
+      "max_points": 51,
+      "percent": 47.05882352941177
+     },
+     "IND-13-S02": {
+      "points": 24,
+      "max_points": 33,
+      "percent": 72.72727272727273
+     },
+     "IND-13-S03": {
+      "points": 21,
+      "max_points": 39,
+      "percent": 53.84615384615385
+     },
+     "IND-13-S04": {
+      "points": 24,
+      "max_points": 33,
+      "percent": 72.72727272727273
+     },
+     "IND-13-S05": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     }
+    }
+   },
+   "note": "نشان می‌دهد وزن ۳:۲:۱ سد ایمنی نیست؛ امتیاز کل حدود ۷۶٫۵٪ می‌ماند."
+  },
+  {
+   "name": "ONLY_CRITICAL_YES",
+   "description_fa": "فقط سؤال‌های بحرانی «بله» و بقیه «خیر»",
+   "rule": {
+    "priority_3": "YES",
+    "otherwise": "NO"
+   },
+   "expected": {
+    "overall": {
+     "points": 1062,
+     "max_points": 4524,
+     "percent": 23.47480106100796
+    },
+    "indicators": {
+     "IND-01": {
+      "points": 135,
+      "max_points": 312,
+      "percent": 43.26923076923077
+     },
+     "IND-02": {
+      "points": 162,
+      "max_points": 402,
+      "percent": 40.298507462686565
+     },
+     "IND-03": {
+      "points": 90,
+      "max_points": 486,
+      "percent": 18.51851851851852
+     },
+     "IND-04": {
+      "points": 81,
+      "max_points": 513,
+      "percent": 15.789473684210526
+     },
+     "IND-05": {
+      "points": 0,
+      "max_points": 219,
+      "percent": 0.0
+     },
+     "IND-06": {
+      "points": 198,
+      "max_points": 336,
+      "percent": 58.92857142857143
+     },
+     "IND-07": {
+      "points": 72,
+      "max_points": 315,
+      "percent": 22.857142857142858
+     },
+     "IND-08": {
+      "points": 45,
+      "max_points": 270,
+      "percent": 16.666666666666668
+     },
+     "IND-09": {
+      "points": 54,
+      "max_points": 261,
+      "percent": 20.689655172413794
+     },
+     "IND-10": {
+      "points": 81,
+      "max_points": 522,
+      "percent": 15.517241379310345
+     },
+     "IND-11": {
+      "points": 0,
+      "max_points": 471,
+      "percent": 0.0
+     },
+     "IND-12": {
+      "points": 81,
+      "max_points": 237,
+      "percent": 34.177215189873415
+     },
+     "IND-13": {
+      "points": 63,
+      "max_points": 180,
+      "percent": 35.0
+     }
+    },
+    "sub_indicators": {
+     "IND-01-S01": {
+      "points": 54,
+      "max_points": 54,
+      "percent": 100.0
+     },
+     "IND-01-S02": {
+      "points": 18,
+      "max_points": 30,
+      "percent": 60.0
+     },
+     "IND-01-S03": {
+      "points": 45,
+      "max_points": 81,
+      "percent": 55.55555555555556
+     },
+     "IND-01-S04": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-01-S05": {
+      "points": 18,
+      "max_points": 57,
+      "percent": 31.57894736842105
+     },
+     "IND-01-S06": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-01-S07": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-02-S01": {
+      "points": 0,
+      "max_points": 21,
+      "percent": 0.0
+     },
+     "IND-02-S02": {
+      "points": 9,
+      "max_points": 27,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S03": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S04": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-02-S05": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-02-S06": {
+      "points": 9,
+      "max_points": 33,
+      "percent": 27.272727272727273
+     },
+     "IND-02-S07": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-02-S08": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-02-S09": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S10": {
+      "points": 27,
+      "max_points": 57,
+      "percent": 47.36842105263158
+     },
+     "IND-02-S11": {
+      "points": 9,
+      "max_points": 21,
+      "percent": 42.857142857142854
+     },
+     "IND-02-S12": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-02-S13": {
+      "points": 9,
+      "max_points": 21,
+      "percent": 42.857142857142854
+     },
+     "IND-02-S14": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-02-S15": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-02-S16": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-03-S01": {
+      "points": 45,
+      "max_points": 63,
+      "percent": 71.42857142857143
+     },
+     "IND-03-S02": {
+      "points": 27,
+      "max_points": 57,
+      "percent": 47.36842105263158
+     },
+     "IND-03-S03": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-03-S04": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-03-S05": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-03-S06": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-03-S07": {
+      "points": 0,
+      "max_points": 39,
+      "percent": 0.0
+     },
+     "IND-03-S08": {
+      "points": 18,
+      "max_points": 81,
+      "percent": 22.22222222222222
+     },
+     "IND-03-S09": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-03-S10": {
+      "points": 0,
+      "max_points": 93,
+      "percent": 0.0
+     },
+     "IND-03-S11": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-04-S01": {
+      "points": 36,
+      "max_points": 54,
+      "percent": 66.66666666666667
+     },
+     "IND-04-S02": {
+      "points": 9,
+      "max_points": 63,
+      "percent": 14.285714285714286
+     },
+     "IND-04-S03": {
+      "points": 0,
+      "max_points": 81,
+      "percent": 0.0
+     },
+     "IND-04-S04": {
+      "points": 0,
+      "max_points": 69,
+      "percent": 0.0
+     },
+     "IND-04-S05": {
+      "points": 27,
+      "max_points": 99,
+      "percent": 27.272727272727273
+     },
+     "IND-04-S06": {
+      "points": 9,
+      "max_points": 54,
+      "percent": 16.666666666666668
+     },
+     "IND-04-S07": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-04-S08": {
+      "points": 0,
+      "max_points": 45,
+      "percent": 0.0
+     },
+     "IND-04-S09": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-05-S01": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-05-S02": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-05-S03": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-05-S04": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-05-S05": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-05-S06": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-05-S07": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-05-S08": {
+      "points": 0,
+      "max_points": 6,
+      "percent": 0.0
+     },
+     "IND-05-S09": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-06-S01": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-06-S02": {
+      "points": 54,
+      "max_points": 60,
+      "percent": 90.0
+     },
+     "IND-06-S03": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-06-S04": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-06-S05": {
+      "points": 18,
+      "max_points": 30,
+      "percent": 60.0
+     },
+     "IND-06-S06": {
+      "points": 18,
+      "max_points": 78,
+      "percent": 23.076923076923077
+     },
+     "IND-06-S07": {
+      "points": 18,
+      "max_points": 24,
+      "percent": 75.0
+     },
+     "IND-06-S08": {
+      "points": 36,
+      "max_points": 48,
+      "percent": 75.0
+     },
+     "IND-06-S09": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-07-S01": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-07-S02": {
+      "points": 18,
+      "max_points": 84,
+      "percent": 21.428571428571427
+     },
+     "IND-07-S03": {
+      "points": 54,
+      "max_points": 132,
+      "percent": 40.90909090909091
+     },
+     "IND-07-S04": {
+      "points": 0,
+      "max_points": 63,
+      "percent": 0.0
+     },
+     "IND-08-S01": {
+      "points": 27,
+      "max_points": 45,
+      "percent": 60.0
+     },
+     "IND-08-S02": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-08-S03": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-08-S04": {
+      "points": 0,
+      "max_points": 9,
+      "percent": 0.0
+     },
+     "IND-08-S05": {
+      "points": 0,
+      "max_points": 9,
+      "percent": 0.0
+     },
+     "IND-08-S06": {
+      "points": 0,
+      "max_points": 9,
+      "percent": 0.0
+     },
+     "IND-08-S07": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-08-S08": {
+      "points": 9,
+      "max_points": 15,
+      "percent": 60.0
+     },
+     "IND-08-S09": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-08-S10": {
+      "points": 0,
+      "max_points": 6,
+      "percent": 0.0
+     },
+     "IND-08-S11": {
+      "points": 9,
+      "max_points": 24,
+      "percent": 37.5
+     },
+     "IND-08-S12": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-08-S13": {
+      "points": 0,
+      "max_points": 6,
+      "percent": 0.0
+     },
+     "IND-08-S14": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-09-S01": {
+      "points": 27,
+      "max_points": 57,
+      "percent": 47.36842105263158
+     },
+     "IND-09-S02": {
+      "points": 9,
+      "max_points": 24,
+      "percent": 37.5
+     },
+     "IND-09-S03": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-09-S04": {
+      "points": 9,
+      "max_points": 90,
+      "percent": 10.0
+     },
+     "IND-09-S05": {
+      "points": 9,
+      "max_points": 54,
+      "percent": 16.666666666666668
+     },
+     "IND-10-S01": {
+      "points": 36,
+      "max_points": 93,
+      "percent": 38.70967741935484
+     },
+     "IND-10-S02": {
+      "points": 18,
+      "max_points": 123,
+      "percent": 14.634146341463415
+     },
+     "IND-10-S03": {
+      "points": 0,
+      "max_points": 78,
+      "percent": 0.0
+     },
+     "IND-10-S04": {
+      "points": 27,
+      "max_points": 60,
+      "percent": 45.0
+     },
+     "IND-10-S05": {
+      "points": 0,
+      "max_points": 51,
+      "percent": 0.0
+     },
+     "IND-10-S06": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-10-S07": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-10-S08": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-11-S01": {
+      "points": 0,
+      "max_points": 99,
+      "percent": 0.0
+     },
+     "IND-11-S02": {
+      "points": 0,
+      "max_points": 96,
+      "percent": 0.0
+     },
+     "IND-11-S03": {
+      "points": 0,
+      "max_points": 87,
+      "percent": 0.0
+     },
+     "IND-11-S04": {
+      "points": 0,
+      "max_points": 45,
+      "percent": 0.0
+     },
+     "IND-11-S05": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-11-S06": {
+      "points": 0,
+      "max_points": 51,
+      "percent": 0.0
+     },
+     "IND-11-S07": {
+      "points": 0,
+      "max_points": 39,
+      "percent": 0.0
+     },
+     "IND-12-S01": {
+      "points": 36,
+      "max_points": 81,
+      "percent": 44.44444444444444
+     },
+     "IND-12-S02": {
+      "points": 18,
+      "max_points": 54,
+      "percent": 33.333333333333336
+     },
+     "IND-12-S03": {
+      "points": 27,
+      "max_points": 75,
+      "percent": 36.0
+     },
+     "IND-12-S04": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-13-S01": {
+      "points": 27,
+      "max_points": 51,
+      "percent": 52.94117647058823
+     },
+     "IND-13-S02": {
+      "points": 9,
+      "max_points": 33,
+      "percent": 27.272727272727273
+     },
+     "IND-13-S03": {
+      "points": 18,
+      "max_points": 39,
+      "percent": 46.15384615384615
+     },
+     "IND-13-S04": {
+      "points": 9,
+      "max_points": 33,
+      "percent": 27.272727272727273
+     },
+     "IND-13-S05": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     }
+    }
+   }
+  },
+  {
+   "name": "CYCLE_BY_ORDER",
+   "description_fa": "در هر شاخص، سؤال‌ها به ترتیب (order) به‌صورت چرخشی YES, CORRECTIVE, NO می‌گیرند (order=1 → YES)",
+   "rule": {
+    "decision": "cycle[(order-1) % 3] with cycle=[YES,CORRECTIVE,NO]"
+   },
+   "expected": {
+    "overall": {
+     "points": 2079,
+     "max_points": 4524,
+     "percent": 45.95490716180371
+    },
+    "indicators": {
+     "IND-01": {
+      "points": 140,
+      "max_points": 312,
+      "percent": 44.87179487179487
+     },
+     "IND-02": {
+      "points": 182,
+      "max_points": 402,
+      "percent": 45.27363184079602
+     },
+     "IND-03": {
+      "points": 222,
+      "max_points": 486,
+      "percent": 45.67901234567901
+     },
+     "IND-04": {
+      "points": 247,
+      "max_points": 513,
+      "percent": 48.148148148148145
+     },
+     "IND-05": {
+      "points": 103,
+      "max_points": 219,
+      "percent": 47.03196347031963
+     },
+     "IND-06": {
+      "points": 153,
+      "max_points": 336,
+      "percent": 45.535714285714285
+     },
+     "IND-07": {
+      "points": 142,
+      "max_points": 315,
+      "percent": 45.07936507936508
+     },
+     "IND-08": {
+      "points": 119,
+      "max_points": 270,
+      "percent": 44.074074074074076
+     },
+     "IND-09": {
+      "points": 113,
+      "max_points": 261,
+      "percent": 43.29501915708812
+     },
+     "IND-10": {
+      "points": 248,
+      "max_points": 522,
+      "percent": 47.509578544061306
+     },
+     "IND-11": {
+      "points": 210,
+      "max_points": 471,
+      "percent": 44.5859872611465
+     },
+     "IND-12": {
+      "points": 111,
+      "max_points": 237,
+      "percent": 46.835443037974684
+     },
+     "IND-13": {
+      "points": 89,
+      "max_points": 180,
+      "percent": 49.44444444444444
+     }
+    },
+    "sub_indicators": {
+     "IND-01-S01": {
+      "points": 24,
+      "max_points": 54,
+      "percent": 44.44444444444444
+     },
+     "IND-01-S02": {
+      "points": 18,
+      "max_points": 30,
+      "percent": 60.0
+     },
+     "IND-01-S03": {
+      "points": 30,
+      "max_points": 81,
+      "percent": 37.03703703703704
+     },
+     "IND-01-S04": {
+      "points": 16,
+      "max_points": 36,
+      "percent": 44.44444444444444
+     },
+     "IND-01-S05": {
+      "points": 24,
+      "max_points": 57,
+      "percent": 42.10526315789474
+     },
+     "IND-01-S06": {
+      "points": 20,
+      "max_points": 42,
+      "percent": 47.61904761904762
+     },
+     "IND-01-S07": {
+      "points": 8,
+      "max_points": 12,
+      "percent": 66.66666666666667
+     },
+     "IND-02-S01": {
+      "points": 12,
+      "max_points": 21,
+      "percent": 57.142857142857146
+     },
+     "IND-02-S02": {
+      "points": 14,
+      "max_points": 27,
+      "percent": 51.851851851851855
+     },
+     "IND-02-S03": {
+      "points": 8,
+      "max_points": 18,
+      "percent": 44.44444444444444
+     },
+     "IND-02-S04": {
+      "points": 15,
+      "max_points": 36,
+      "percent": 41.666666666666664
+     },
+     "IND-02-S05": {
+      "points": 9,
+      "max_points": 18,
+      "percent": 50.0
+     },
+     "IND-02-S06": {
+      "points": 14,
+      "max_points": 33,
+      "percent": 42.42424242424242
+     },
+     "IND-02-S07": {
+      "points": 12,
+      "max_points": 27,
+      "percent": 44.44444444444444
+     },
+     "IND-02-S08": {
+      "points": 10,
+      "max_points": 24,
+      "percent": 41.666666666666664
+     },
+     "IND-02-S09": {
+      "points": 7,
+      "max_points": 18,
+      "percent": 38.888888888888886
+     },
+     "IND-02-S10": {
+      "points": 28,
+      "max_points": 57,
+      "percent": 49.12280701754386
+     },
+     "IND-02-S11": {
+      "points": 11,
+      "max_points": 21,
+      "percent": 52.38095238095238
+     },
+     "IND-02-S12": {
+      "points": 5,
+      "max_points": 15,
+      "percent": 33.333333333333336
+     },
+     "IND-02-S13": {
+      "points": 8,
+      "max_points": 21,
+      "percent": 38.095238095238095
+     },
+     "IND-02-S14": {
+      "points": 9,
+      "max_points": 18,
+      "percent": 50.0
+     },
+     "IND-02-S15": {
+      "points": 12,
+      "max_points": 30,
+      "percent": 40.0
+     },
+     "IND-02-S16": {
+      "points": 8,
+      "max_points": 18,
+      "percent": 44.44444444444444
+     },
+     "IND-03-S01": {
+      "points": 32,
+      "max_points": 63,
+      "percent": 50.79365079365079
+     },
+     "IND-03-S02": {
+      "points": 26,
+      "max_points": 57,
+      "percent": 45.6140350877193
+     },
+     "IND-03-S03": {
+      "points": 17,
+      "max_points": 42,
+      "percent": 40.476190476190474
+     },
+     "IND-03-S04": {
+      "points": 14,
+      "max_points": 24,
+      "percent": 58.333333333333336
+     },
+     "IND-03-S05": {
+      "points": 8,
+      "max_points": 18,
+      "percent": 44.44444444444444
+     },
+     "IND-03-S06": {
+      "points": 16,
+      "max_points": 36,
+      "percent": 44.44444444444444
+     },
+     "IND-03-S07": {
+      "points": 15,
+      "max_points": 39,
+      "percent": 38.46153846153846
+     },
+     "IND-03-S08": {
+      "points": 37,
+      "max_points": 81,
+      "percent": 45.67901234567901
+     },
+     "IND-03-S09": {
+      "points": 8,
+      "max_points": 18,
+      "percent": 44.44444444444444
+     },
+     "IND-03-S10": {
+      "points": 41,
+      "max_points": 93,
+      "percent": 44.086021505376344
+     },
+     "IND-03-S11": {
+      "points": 8,
+      "max_points": 15,
+      "percent": 53.333333333333336
+     },
+     "IND-04-S01": {
+      "points": 29,
+      "max_points": 54,
+      "percent": 53.7037037037037
+     },
+     "IND-04-S02": {
+      "points": 25,
+      "max_points": 63,
+      "percent": 39.682539682539684
+     },
+     "IND-04-S03": {
+      "points": 41,
+      "max_points": 81,
+      "percent": 50.617283950617285
+     },
+     "IND-04-S04": {
+      "points": 34,
+      "max_points": 69,
+      "percent": 49.27536231884058
+     },
+     "IND-04-S05": {
+      "points": 51,
+      "max_points": 99,
+      "percent": 51.515151515151516
+     },
+     "IND-04-S06": {
+      "points": 26,
+      "max_points": 54,
+      "percent": 48.148148148148145
+     },
+     "IND-04-S07": {
+      "points": 14,
+      "max_points": 33,
+      "percent": 42.42424242424242
+     },
+     "IND-04-S08": {
+      "points": 20,
+      "max_points": 45,
+      "percent": 44.44444444444444
+     },
+     "IND-04-S09": {
+      "points": 7,
+      "max_points": 15,
+      "percent": 46.666666666666664
+     },
+     "IND-05-S01": {
+      "points": 15,
+      "max_points": 24,
+      "percent": 62.5
+     },
+     "IND-05-S02": {
+      "points": 12,
+      "max_points": 36,
+      "percent": 33.333333333333336
+     },
+     "IND-05-S03": {
+      "points": 12,
+      "max_points": 24,
+      "percent": 50.0
+     },
+     "IND-05-S04": {
+      "points": 16,
+      "max_points": 33,
+      "percent": 48.484848484848484
+     },
+     "IND-05-S05": {
+      "points": 4,
+      "max_points": 12,
+      "percent": 33.333333333333336
+     },
+     "IND-05-S06": {
+      "points": 16,
+      "max_points": 30,
+      "percent": 53.333333333333336
+     },
+     "IND-05-S07": {
+      "points": 12,
+      "max_points": 27,
+      "percent": 44.44444444444444
+     },
+     "IND-05-S08": {
+      "points": 3,
+      "max_points": 6,
+      "percent": 50.0
+     },
+     "IND-05-S09": {
+      "points": 13,
+      "max_points": 27,
+      "percent": 48.148148148148145
+     },
+     "IND-06-S01": {
+      "points": 12,
+      "max_points": 27,
+      "percent": 44.44444444444444
+     },
+     "IND-06-S02": {
+      "points": 30,
+      "max_points": 60,
+      "percent": 50.0
+     },
+     "IND-06-S03": {
+      "points": 4,
+      "max_points": 12,
+      "percent": 33.333333333333336
+     },
+     "IND-06-S04": {
+      "points": 12,
+      "max_points": 27,
+      "percent": 44.44444444444444
+     },
+     "IND-06-S05": {
+      "points": 14,
+      "max_points": 30,
+      "percent": 46.666666666666664
+     },
+     "IND-06-S06": {
+      "points": 33,
+      "max_points": 78,
+      "percent": 42.30769230769231
+     },
+     "IND-06-S07": {
+      "points": 11,
+      "max_points": 24,
+      "percent": 45.833333333333336
+     },
+     "IND-06-S08": {
+      "points": 23,
+      "max_points": 48,
+      "percent": 47.916666666666664
+     },
+     "IND-06-S09": {
+      "points": 14,
+      "max_points": 30,
+      "percent": 46.666666666666664
+     },
+     "IND-07-S01": {
+      "points": 19,
+      "max_points": 36,
+      "percent": 52.77777777777778
+     },
+     "IND-07-S02": {
+      "points": 35,
+      "max_points": 84,
+      "percent": 41.666666666666664
+     },
+     "IND-07-S03": {
+      "points": 60,
+      "max_points": 132,
+      "percent": 45.45454545454545
+     },
+     "IND-07-S04": {
+      "points": 28,
+      "max_points": 63,
+      "percent": 44.44444444444444
+     },
+     "IND-08-S01": {
+      "points": 20,
+      "max_points": 45,
+      "percent": 44.44444444444444
+     },
+     "IND-08-S02": {
+      "points": 13,
+      "max_points": 30,
+      "percent": 43.333333333333336
+     },
+     "IND-08-S03": {
+      "points": 8,
+      "max_points": 18,
+      "percent": 44.44444444444444
+     },
+     "IND-08-S04": {
+      "points": 4,
+      "max_points": 9,
+      "percent": 44.44444444444444
+     },
+     "IND-08-S05": {
+      "points": 7,
+      "max_points": 9,
+      "percent": 77.77777777777777
+     },
+     "IND-08-S06": {
+      "points": 3,
+      "max_points": 9,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S07": {
+      "points": 10,
+      "max_points": 30,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S08": {
+      "points": 2,
+      "max_points": 15,
+      "percent": 13.333333333333334
+     },
+     "IND-08-S09": {
+      "points": 14,
+      "max_points": 24,
+      "percent": 58.333333333333336
+     },
+     "IND-08-S10": {
+      "points": 2,
+      "max_points": 6,
+      "percent": 33.333333333333336
+     },
+     "IND-08-S11": {
+      "points": 13,
+      "max_points": 24,
+      "percent": 54.166666666666664
+     },
+     "IND-08-S12": {
+      "points": 2,
+      "max_points": 12,
+      "percent": 16.666666666666668
+     },
+     "IND-08-S13": {
+      "points": 6,
+      "max_points": 6,
+      "percent": 100.0
+     },
+     "IND-08-S14": {
+      "points": 15,
+      "max_points": 33,
+      "percent": 45.45454545454545
+     },
+     "IND-09-S01": {
+      "points": 26,
+      "max_points": 57,
+      "percent": 45.6140350877193
+     },
+     "IND-09-S02": {
+      "points": 5,
+      "max_points": 24,
+      "percent": 20.833333333333332
+     },
+     "IND-09-S03": {
+      "points": 16,
+      "max_points": 36,
+      "percent": 44.44444444444444
+     },
+     "IND-09-S04": {
+      "points": 42,
+      "max_points": 90,
+      "percent": 46.666666666666664
+     },
+     "IND-09-S05": {
+      "points": 24,
+      "max_points": 54,
+      "percent": 44.44444444444444
+     },
+     "IND-10-S01": {
+      "points": 51,
+      "max_points": 93,
+      "percent": 54.83870967741935
+     },
+     "IND-10-S02": {
+      "points": 56,
+      "max_points": 123,
+      "percent": 45.52845528455285
+     },
+     "IND-10-S03": {
+      "points": 33,
+      "max_points": 78,
+      "percent": 42.30769230769231
+     },
+     "IND-10-S04": {
+      "points": 31,
+      "max_points": 60,
+      "percent": 51.666666666666664
+     },
+     "IND-10-S05": {
+      "points": 24,
+      "max_points": 51,
+      "percent": 47.05882352941177
+     },
+     "IND-10-S06": {
+      "points": 13,
+      "max_points": 33,
+      "percent": 39.39393939393939
+     },
+     "IND-10-S07": {
+      "points": 18,
+      "max_points": 42,
+      "percent": 42.857142857142854
+     },
+     "IND-10-S08": {
+      "points": 22,
+      "max_points": 42,
+      "percent": 52.38095238095238
+     },
+     "IND-11-S01": {
+      "points": 45,
+      "max_points": 99,
+      "percent": 45.45454545454545
+     },
+     "IND-11-S02": {
+      "points": 42,
+      "max_points": 96,
+      "percent": 43.75
+     },
+     "IND-11-S03": {
+      "points": 40,
+      "max_points": 87,
+      "percent": 45.97701149425287
+     },
+     "IND-11-S04": {
+      "points": 20,
+      "max_points": 45,
+      "percent": 44.44444444444444
+     },
+     "IND-11-S05": {
+      "points": 21,
+      "max_points": 54,
+      "percent": 38.888888888888886
+     },
+     "IND-11-S06": {
+      "points": 24,
+      "max_points": 51,
+      "percent": 47.05882352941177
+     },
+     "IND-11-S07": {
+      "points": 18,
+      "max_points": 39,
+      "percent": 46.15384615384615
+     },
+     "IND-12-S01": {
+      "points": 35,
+      "max_points": 81,
+      "percent": 43.20987654320987
+     },
+     "IND-12-S02": {
+      "points": 30,
+      "max_points": 54,
+      "percent": 55.55555555555556
+     },
+     "IND-12-S03": {
+      "points": 35,
+      "max_points": 75,
+      "percent": 46.666666666666664
+     },
+     "IND-12-S04": {
+      "points": 11,
+      "max_points": 27,
+      "percent": 40.74074074074074
+     },
+     "IND-13-S01": {
+      "points": 29,
+      "max_points": 51,
+      "percent": 56.86274509803921
+     },
+     "IND-13-S02": {
+      "points": 11,
+      "max_points": 33,
+      "percent": 33.333333333333336
+     },
+     "IND-13-S03": {
+      "points": 19,
+      "max_points": 39,
+      "percent": 48.717948717948715
+     },
+     "IND-13-S04": {
+      "points": 19,
+      "max_points": 33,
+      "percent": 57.57575757575758
+     },
+     "IND-13-S05": {
+      "points": 11,
+      "max_points": 24,
+      "percent": 45.833333333333336
+     }
+    }
+   }
+  },
+  {
+   "name": "PARTIAL_FIRST_100_YES",
+   "description_fa": "فقط ۱۰۰ سؤال اول بانک «بله» خورده‌اند و بقیه هنوز نمره‌ی ارزیاب ندارند",
+   "rule": {
+    "first_n": 100,
+    "decision": "YES",
+    "others": "unscored"
+   },
+   "expected": {
+    "overall": {
+     "points": 648,
+     "max_points": 4524,
+     "percent": 14.323607427055704
+    },
+    "indicators": {
+     "IND-01": {
+      "points": 312,
+      "max_points": 312,
+      "percent": 100.0
+     },
+     "IND-02": {
+      "points": 336,
+      "max_points": 402,
+      "percent": 83.58208955223881
+     },
+     "IND-03": {
+      "points": 0,
+      "max_points": 486,
+      "percent": 0.0
+     },
+     "IND-04": {
+      "points": 0,
+      "max_points": 513,
+      "percent": 0.0
+     },
+     "IND-05": {
+      "points": 0,
+      "max_points": 219,
+      "percent": 0.0
+     },
+     "IND-06": {
+      "points": 0,
+      "max_points": 336,
+      "percent": 0.0
+     },
+     "IND-07": {
+      "points": 0,
+      "max_points": 315,
+      "percent": 0.0
+     },
+     "IND-08": {
+      "points": 0,
+      "max_points": 270,
+      "percent": 0.0
+     },
+     "IND-09": {
+      "points": 0,
+      "max_points": 261,
+      "percent": 0.0
+     },
+     "IND-10": {
+      "points": 0,
+      "max_points": 522,
+      "percent": 0.0
+     },
+     "IND-11": {
+      "points": 0,
+      "max_points": 471,
+      "percent": 0.0
+     },
+     "IND-12": {
+      "points": 0,
+      "max_points": 237,
+      "percent": 0.0
+     },
+     "IND-13": {
+      "points": 0,
+      "max_points": 180,
+      "percent": 0.0
+     }
+    },
+    "sub_indicators": {
+     "IND-01-S01": {
+      "points": 54,
+      "max_points": 54,
+      "percent": 100.0
+     },
+     "IND-01-S02": {
+      "points": 30,
+      "max_points": 30,
+      "percent": 100.0
+     },
+     "IND-01-S03": {
+      "points": 81,
+      "max_points": 81,
+      "percent": 100.0
+     },
+     "IND-01-S04": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-01-S05": {
+      "points": 57,
+      "max_points": 57,
+      "percent": 100.0
+     },
+     "IND-01-S06": {
+      "points": 42,
+      "max_points": 42,
+      "percent": 100.0
+     },
+     "IND-01-S07": {
+      "points": 12,
+      "max_points": 12,
+      "percent": 100.0
+     },
+     "IND-02-S01": {
+      "points": 21,
+      "max_points": 21,
+      "percent": 100.0
+     },
+     "IND-02-S02": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-02-S03": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-02-S04": {
+      "points": 36,
+      "max_points": 36,
+      "percent": 100.0
+     },
+     "IND-02-S05": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-02-S06": {
+      "points": 33,
+      "max_points": 33,
+      "percent": 100.0
+     },
+     "IND-02-S07": {
+      "points": 27,
+      "max_points": 27,
+      "percent": 100.0
+     },
+     "IND-02-S08": {
+      "points": 24,
+      "max_points": 24,
+      "percent": 100.0
+     },
+     "IND-02-S09": {
+      "points": 18,
+      "max_points": 18,
+      "percent": 100.0
+     },
+     "IND-02-S10": {
+      "points": 57,
+      "max_points": 57,
+      "percent": 100.0
+     },
+     "IND-02-S11": {
+      "points": 21,
+      "max_points": 21,
+      "percent": 100.0
+     },
+     "IND-02-S12": {
+      "points": 15,
+      "max_points": 15,
+      "percent": 100.0
+     },
+     "IND-02-S13": {
+      "points": 21,
+      "max_points": 21,
+      "percent": 100.0
+     },
+     "IND-02-S14": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S15": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-02-S16": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-03-S01": {
+      "points": 0,
+      "max_points": 63,
+      "percent": 0.0
+     },
+     "IND-03-S02": {
+      "points": 0,
+      "max_points": 57,
+      "percent": 0.0
+     },
+     "IND-03-S03": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-03-S04": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-03-S05": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-03-S06": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-03-S07": {
+      "points": 0,
+      "max_points": 39,
+      "percent": 0.0
+     },
+     "IND-03-S08": {
+      "points": 0,
+      "max_points": 81,
+      "percent": 0.0
+     },
+     "IND-03-S09": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-03-S10": {
+      "points": 0,
+      "max_points": 93,
+      "percent": 0.0
+     },
+     "IND-03-S11": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-04-S01": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-04-S02": {
+      "points": 0,
+      "max_points": 63,
+      "percent": 0.0
+     },
+     "IND-04-S03": {
+      "points": 0,
+      "max_points": 81,
+      "percent": 0.0
+     },
+     "IND-04-S04": {
+      "points": 0,
+      "max_points": 69,
+      "percent": 0.0
+     },
+     "IND-04-S05": {
+      "points": 0,
+      "max_points": 99,
+      "percent": 0.0
+     },
+     "IND-04-S06": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-04-S07": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-04-S08": {
+      "points": 0,
+      "max_points": 45,
+      "percent": 0.0
+     },
+     "IND-04-S09": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-05-S01": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-05-S02": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-05-S03": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-05-S04": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-05-S05": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-05-S06": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-05-S07": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-05-S08": {
+      "points": 0,
+      "max_points": 6,
+      "percent": 0.0
+     },
+     "IND-05-S09": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-06-S01": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-06-S02": {
+      "points": 0,
+      "max_points": 60,
+      "percent": 0.0
+     },
+     "IND-06-S03": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-06-S04": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-06-S05": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-06-S06": {
+      "points": 0,
+      "max_points": 78,
+      "percent": 0.0
+     },
+     "IND-06-S07": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-06-S08": {
+      "points": 0,
+      "max_points": 48,
+      "percent": 0.0
+     },
+     "IND-06-S09": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-07-S01": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-07-S02": {
+      "points": 0,
+      "max_points": 84,
+      "percent": 0.0
+     },
+     "IND-07-S03": {
+      "points": 0,
+      "max_points": 132,
+      "percent": 0.0
+     },
+     "IND-07-S04": {
+      "points": 0,
+      "max_points": 63,
+      "percent": 0.0
+     },
+     "IND-08-S01": {
+      "points": 0,
+      "max_points": 45,
+      "percent": 0.0
+     },
+     "IND-08-S02": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-08-S03": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-08-S04": {
+      "points": 0,
+      "max_points": 9,
+      "percent": 0.0
+     },
+     "IND-08-S05": {
+      "points": 0,
+      "max_points": 9,
+      "percent": 0.0
+     },
+     "IND-08-S06": {
+      "points": 0,
+      "max_points": 9,
+      "percent": 0.0
+     },
+     "IND-08-S07": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-08-S08": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-08-S09": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-08-S10": {
+      "points": 0,
+      "max_points": 6,
+      "percent": 0.0
+     },
+     "IND-08-S11": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-08-S12": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-08-S13": {
+      "points": 0,
+      "max_points": 6,
+      "percent": 0.0
+     },
+     "IND-08-S14": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-09-S01": {
+      "points": 0,
+      "max_points": 57,
+      "percent": 0.0
+     },
+     "IND-09-S02": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-09-S03": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-09-S04": {
+      "points": 0,
+      "max_points": 90,
+      "percent": 0.0
+     },
+     "IND-09-S05": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-10-S01": {
+      "points": 0,
+      "max_points": 93,
+      "percent": 0.0
+     },
+     "IND-10-S02": {
+      "points": 0,
+      "max_points": 123,
+      "percent": 0.0
+     },
+     "IND-10-S03": {
+      "points": 0,
+      "max_points": 78,
+      "percent": 0.0
+     },
+     "IND-10-S04": {
+      "points": 0,
+      "max_points": 60,
+      "percent": 0.0
+     },
+     "IND-10-S05": {
+      "points": 0,
+      "max_points": 51,
+      "percent": 0.0
+     },
+     "IND-10-S06": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-10-S07": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-10-S08": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-11-S01": {
+      "points": 0,
+      "max_points": 99,
+      "percent": 0.0
+     },
+     "IND-11-S02": {
+      "points": 0,
+      "max_points": 96,
+      "percent": 0.0
+     },
+     "IND-11-S03": {
+      "points": 0,
+      "max_points": 87,
+      "percent": 0.0
+     },
+     "IND-11-S04": {
+      "points": 0,
+      "max_points": 45,
+      "percent": 0.0
+     },
+     "IND-11-S05": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-11-S06": {
+      "points": 0,
+      "max_points": 51,
+      "percent": 0.0
+     },
+     "IND-11-S07": {
+      "points": 0,
+      "max_points": 39,
+      "percent": 0.0
+     },
+     "IND-12-S01": {
+      "points": 0,
+      "max_points": 81,
+      "percent": 0.0
+     },
+     "IND-12-S02": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-12-S03": {
+      "points": 0,
+      "max_points": 75,
+      "percent": 0.0
+     },
+     "IND-12-S04": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-13-S01": {
+      "points": 0,
+      "max_points": 51,
+      "percent": 0.0
+     },
+     "IND-13-S02": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-13-S03": {
+      "points": 0,
+      "max_points": 39,
+      "percent": 0.0
+     },
+     "IND-13-S04": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-13-S05": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     }
+    },
+    "unscored_count": 709
+   },
+   "note": "پیش‌نمایش درصد همیشه نسبت به کل حداکثر (۴۵۲۴) است، نه فقط سؤال‌های نمره‌خورده. unscored_count باید ۷۰۹ باشد."
+  },
+  {
+   "name": "HAND_PLANNING_S01",
+   "description_fa": "مثال دست‌محاسبه: زیرشاخص «سیاست، ساختار و فرماندهی» (۶ سؤال همه priority=3)",
+   "rule": {
+    "explicit": {
+     "A1": "YES",
+     "A2": "YES",
+     "A3": "YES",
+     "A4": "CORRECTIVE",
+     "A5": "NO",
+     "A6": "YES"
+    }
+   },
+   "expected": {
+    "overall": {
+     "points": 39,
+     "max_points": 4524,
+     "percent": 0.8620689655172413
+    },
+    "indicators": {
+     "IND-01": {
+      "points": 39,
+      "max_points": 312,
+      "percent": 12.5
+     },
+     "IND-02": {
+      "points": 0,
+      "max_points": 402,
+      "percent": 0.0
+     },
+     "IND-03": {
+      "points": 0,
+      "max_points": 486,
+      "percent": 0.0
+     },
+     "IND-04": {
+      "points": 0,
+      "max_points": 513,
+      "percent": 0.0
+     },
+     "IND-05": {
+      "points": 0,
+      "max_points": 219,
+      "percent": 0.0
+     },
+     "IND-06": {
+      "points": 0,
+      "max_points": 336,
+      "percent": 0.0
+     },
+     "IND-07": {
+      "points": 0,
+      "max_points": 315,
+      "percent": 0.0
+     },
+     "IND-08": {
+      "points": 0,
+      "max_points": 270,
+      "percent": 0.0
+     },
+     "IND-09": {
+      "points": 0,
+      "max_points": 261,
+      "percent": 0.0
+     },
+     "IND-10": {
+      "points": 0,
+      "max_points": 522,
+      "percent": 0.0
+     },
+     "IND-11": {
+      "points": 0,
+      "max_points": 471,
+      "percent": 0.0
+     },
+     "IND-12": {
+      "points": 0,
+      "max_points": 237,
+      "percent": 0.0
+     },
+     "IND-13": {
+      "points": 0,
+      "max_points": 180,
+      "percent": 0.0
+     }
+    },
+    "sub_indicators": {
+     "IND-01-S01": {
+      "points": 39,
+      "max_points": 54,
+      "percent": 72.22222222222223
+     },
+     "IND-01-S02": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-01-S03": {
+      "points": 0,
+      "max_points": 81,
+      "percent": 0.0
+     },
+     "IND-01-S04": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-01-S05": {
+      "points": 0,
+      "max_points": 57,
+      "percent": 0.0
+     },
+     "IND-01-S06": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-01-S07": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-02-S01": {
+      "points": 0,
+      "max_points": 21,
+      "percent": 0.0
+     },
+     "IND-02-S02": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-02-S03": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S04": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-02-S05": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S06": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-02-S07": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-02-S08": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-02-S09": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S10": {
+      "points": 0,
+      "max_points": 57,
+      "percent": 0.0
+     },
+     "IND-02-S11": {
+      "points": 0,
+      "max_points": 21,
+      "percent": 0.0
+     },
+     "IND-02-S12": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-02-S13": {
+      "points": 0,
+      "max_points": 21,
+      "percent": 0.0
+     },
+     "IND-02-S14": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-02-S15": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-02-S16": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-03-S01": {
+      "points": 0,
+      "max_points": 63,
+      "percent": 0.0
+     },
+     "IND-03-S02": {
+      "points": 0,
+      "max_points": 57,
+      "percent": 0.0
+     },
+     "IND-03-S03": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-03-S04": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-03-S05": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-03-S06": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-03-S07": {
+      "points": 0,
+      "max_points": 39,
+      "percent": 0.0
+     },
+     "IND-03-S08": {
+      "points": 0,
+      "max_points": 81,
+      "percent": 0.0
+     },
+     "IND-03-S09": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-03-S10": {
+      "points": 0,
+      "max_points": 93,
+      "percent": 0.0
+     },
+     "IND-03-S11": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-04-S01": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-04-S02": {
+      "points": 0,
+      "max_points": 63,
+      "percent": 0.0
+     },
+     "IND-04-S03": {
+      "points": 0,
+      "max_points": 81,
+      "percent": 0.0
+     },
+     "IND-04-S04": {
+      "points": 0,
+      "max_points": 69,
+      "percent": 0.0
+     },
+     "IND-04-S05": {
+      "points": 0,
+      "max_points": 99,
+      "percent": 0.0
+     },
+     "IND-04-S06": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-04-S07": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-04-S08": {
+      "points": 0,
+      "max_points": 45,
+      "percent": 0.0
+     },
+     "IND-04-S09": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-05-S01": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-05-S02": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-05-S03": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-05-S04": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-05-S05": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-05-S06": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-05-S07": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-05-S08": {
+      "points": 0,
+      "max_points": 6,
+      "percent": 0.0
+     },
+     "IND-05-S09": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-06-S01": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-06-S02": {
+      "points": 0,
+      "max_points": 60,
+      "percent": 0.0
+     },
+     "IND-06-S03": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-06-S04": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-06-S05": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-06-S06": {
+      "points": 0,
+      "max_points": 78,
+      "percent": 0.0
+     },
+     "IND-06-S07": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-06-S08": {
+      "points": 0,
+      "max_points": 48,
+      "percent": 0.0
+     },
+     "IND-06-S09": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-07-S01": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-07-S02": {
+      "points": 0,
+      "max_points": 84,
+      "percent": 0.0
+     },
+     "IND-07-S03": {
+      "points": 0,
+      "max_points": 132,
+      "percent": 0.0
+     },
+     "IND-07-S04": {
+      "points": 0,
+      "max_points": 63,
+      "percent": 0.0
+     },
+     "IND-08-S01": {
+      "points": 0,
+      "max_points": 45,
+      "percent": 0.0
+     },
+     "IND-08-S02": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-08-S03": {
+      "points": 0,
+      "max_points": 18,
+      "percent": 0.0
+     },
+     "IND-08-S04": {
+      "points": 0,
+      "max_points": 9,
+      "percent": 0.0
+     },
+     "IND-08-S05": {
+      "points": 0,
+      "max_points": 9,
+      "percent": 0.0
+     },
+     "IND-08-S06": {
+      "points": 0,
+      "max_points": 9,
+      "percent": 0.0
+     },
+     "IND-08-S07": {
+      "points": 0,
+      "max_points": 30,
+      "percent": 0.0
+     },
+     "IND-08-S08": {
+      "points": 0,
+      "max_points": 15,
+      "percent": 0.0
+     },
+     "IND-08-S09": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-08-S10": {
+      "points": 0,
+      "max_points": 6,
+      "percent": 0.0
+     },
+     "IND-08-S11": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-08-S12": {
+      "points": 0,
+      "max_points": 12,
+      "percent": 0.0
+     },
+     "IND-08-S13": {
+      "points": 0,
+      "max_points": 6,
+      "percent": 0.0
+     },
+     "IND-08-S14": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-09-S01": {
+      "points": 0,
+      "max_points": 57,
+      "percent": 0.0
+     },
+     "IND-09-S02": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     },
+     "IND-09-S03": {
+      "points": 0,
+      "max_points": 36,
+      "percent": 0.0
+     },
+     "IND-09-S04": {
+      "points": 0,
+      "max_points": 90,
+      "percent": 0.0
+     },
+     "IND-09-S05": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-10-S01": {
+      "points": 0,
+      "max_points": 93,
+      "percent": 0.0
+     },
+     "IND-10-S02": {
+      "points": 0,
+      "max_points": 123,
+      "percent": 0.0
+     },
+     "IND-10-S03": {
+      "points": 0,
+      "max_points": 78,
+      "percent": 0.0
+     },
+     "IND-10-S04": {
+      "points": 0,
+      "max_points": 60,
+      "percent": 0.0
+     },
+     "IND-10-S05": {
+      "points": 0,
+      "max_points": 51,
+      "percent": 0.0
+     },
+     "IND-10-S06": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-10-S07": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-10-S08": {
+      "points": 0,
+      "max_points": 42,
+      "percent": 0.0
+     },
+     "IND-11-S01": {
+      "points": 0,
+      "max_points": 99,
+      "percent": 0.0
+     },
+     "IND-11-S02": {
+      "points": 0,
+      "max_points": 96,
+      "percent": 0.0
+     },
+     "IND-11-S03": {
+      "points": 0,
+      "max_points": 87,
+      "percent": 0.0
+     },
+     "IND-11-S04": {
+      "points": 0,
+      "max_points": 45,
+      "percent": 0.0
+     },
+     "IND-11-S05": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-11-S06": {
+      "points": 0,
+      "max_points": 51,
+      "percent": 0.0
+     },
+     "IND-11-S07": {
+      "points": 0,
+      "max_points": 39,
+      "percent": 0.0
+     },
+     "IND-12-S01": {
+      "points": 0,
+      "max_points": 81,
+      "percent": 0.0
+     },
+     "IND-12-S02": {
+      "points": 0,
+      "max_points": 54,
+      "percent": 0.0
+     },
+     "IND-12-S03": {
+      "points": 0,
+      "max_points": 75,
+      "percent": 0.0
+     },
+     "IND-12-S04": {
+      "points": 0,
+      "max_points": 27,
+      "percent": 0.0
+     },
+     "IND-13-S01": {
+      "points": 0,
+      "max_points": 51,
+      "percent": 0.0
+     },
+     "IND-13-S02": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-13-S03": {
+      "points": 0,
+      "max_points": 39,
+      "percent": 0.0
+     },
+     "IND-13-S04": {
+      "points": 0,
+      "max_points": 33,
+      "percent": 0.0
+     },
+     "IND-13-S05": {
+      "points": 0,
+      "max_points": 24,
+      "percent": 0.0
+     }
+    }
+   },
+   "note": "9+9+9+3+0+9 = 39 از 54 → 72.2٪"
+  },
+  {
+   "name": "SINGLE_QUESTION_EXAMPLES",
+   "description_fa": "امتیاز یک سؤال = تصمیم ارزیاب × اولویت",
+   "table": [
+    {
+     "decision": "YES",
+     "priority": 3,
+     "points": 9
+    },
+    {
+     "decision": "CORRECTIVE",
+     "priority": 3,
+     "points": 3
+    },
+    {
+     "decision": "NO",
+     "priority": 3,
+     "points": 0
+    },
+    {
+     "decision": "YES",
+     "priority": 2,
+     "points": 6
+    },
+    {
+     "decision": "CORRECTIVE",
+     "priority": 2,
+     "points": 2
+    },
+    {
+     "decision": "NO",
+     "priority": 2,
+     "points": 0
+    },
+    {
+     "decision": "YES",
+     "priority": 1,
+     "points": 3
+    },
+    {
+     "decision": "CORRECTIVE",
+     "priority": 1,
+     "points": 1
+    },
+    {
+     "decision": "NO",
+     "priority": 1,
+     "points": 0
+    }
+   ]
+  }
+ ]
+}

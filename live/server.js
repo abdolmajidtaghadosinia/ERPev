@@ -7,13 +7,16 @@ const zlib = require('node:zlib');
 const { DatabaseSync } = require('node:sqlite');
 
 const PORT = process.env.PORT || 3002;
-const UPLOAD_DIR = path.join(__dirname, 'uploads'); // outside any served path; files are only reachable via /api/files/:id
+const HOST = process.env.HOST || '127.0.0.1'; // localhost only by default; set HOST=0.0.0.0 to expose it on the network
+const DATA_DIR = process.env.DATA_DIR || __dirname; // database + uploads; tests point this at a temp folder
+const COOKIE_SECURE = process.env.COOKIE_SECURE === '1' ? '; Secure' : ''; // set COOKIE_SECURE=1 when served over HTTPS
+const UPLOAD_DIR = path.join(DATA_DIR, 'uploads'); // outside any served path; files are only reachable via /api/files/:id
 const MAX_FILE = 50 * 1024 * 1024;
 const SESSION_MS = 12 * 3600 * 1000;
 const DEFAULT_PW = 'Readiness@1405';
 fs.mkdirSync(UPLOAD_DIR, { recursive: true });
 
-const db = new DatabaseSync(path.join(__dirname, 'readiness.db'));
+const db = new DatabaseSync(path.join(DATA_DIR, 'readiness.db'));
 db.exec(`
   CREATE TABLE IF NOT EXISTS companies (id TEXT PRIMARY KEY, name TEXT NOT NULL, sector TEXT, location TEXT, extra TEXT NOT NULL);
   CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, username TEXT NOT NULL UNIQUE, display_name TEXT, role TEXT NOT NULL, company_id TEXT, active INTEGER NOT NULL, extra TEXT NOT NULL);
@@ -379,13 +382,18 @@ function buildPage() {
     `componentWillUnmount() { window.removeEventListener('resize', this.onResize); }
   componentDidUpdate() { const d = this.state.db; if (d && d !== this.lastDb) { this.lastDb = d; if (this.state.userId) this.persist(d); } }
   persist(d) {
-    clearTimeout(this.pT);
+    clearTimeout(this.pT); clearTimeout(this.rT);
     this.pT = setTimeout(async () => {
       try {
         const r = await fetch('/api/db', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) });
         if (r.status === 401) return this.logoutNow();
-        if (!r.ok) { let m = 'ذخیره‌ی تغییرات ممکن نشد'; try { m = (await r.json()).error || m; } catch (e) {} this.toast(m, 'err'); const u = this.me(); if (u) await this.enter(u.username, true); }
-      } catch (e) { this.toast('ارتباط با سرور برقرار نیست', 'err'); }
+        if (!r.ok) { let m = 'ذخیره‌ی تغییرات ممکن نشد'; try { m = (await r.json()).error || m; } catch (e) {} this.saveErr = true; this.setState({ save: 'error' }); this.toast(m, 'err'); const u = this.me(); if (u) await this.enter(u.username, true); return; }
+        if (this.saveErr) { this.saveErr = false; this.setState({ save: 'saved' }); }
+      } catch (e) {
+        // network failure: keep the "not saved" state visible and retry with the latest data until the server answers
+        this.saveErr = true; this.setState({ save: 'error' }); this.toast('ارتباط با سرور برقرار نیست', 'err');
+        this.rT = setTimeout(() => { if (this.state.userId) this.persist(this.state.db); }, 5000);
+      }
     }, 400);
   }
   logoutNow() { this.lastDb = ${EMPTY}; this.setState({ userId: null, db: this.lastDb, screen: 'login', modal: null, drawer: false }); }
@@ -463,7 +471,7 @@ function buildPage() {
         await this.loadJs('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js');
         if (!this.pdfWorker) this.pdfWorker = URL.createObjectURL(new Blob([await (await fetch('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js')).text()], { type: 'text/javascript' }));
         window.pdfjsLib.GlobalWorkerOptions.workerSrc = this.pdfWorker;
-        const pdf = await window.pdfjsLib.getDocument({ data: buf, disableFontFace: true }).promise; if (!live()) return;
+        const pdf = await window.pdfjsLib.getDocument({ data: buf, disableFontFace: true, isEvalSupported: false }).promise; if (!live()) return;
         box.innerHTML = ''; box.style.background = '#e5e7eb';
         const W = Math.max(300, Math.min(box.clientWidth - 32, 900)), N = Math.min(pdf.numPages, 60);
         for (let i = 1; i <= N; i++) {
@@ -523,6 +531,9 @@ function buildPage() {
       </div>
     </div>
   </div></sc-if><!-- ASSESSEE HOME -->`);
+  // the "saved" indicator must reflect the real result of the save request, not a timer
+  swap("this.svT = setTimeout(() => this.setState({ save: 'saved' }), 600);", "this.svT = setTimeout(() => this.setState({ save: this.saveErr ? 'error' : 'saved' }), 600);");
+  swap("S.save === 'saved' ? ['ذخیره شد ✓', '#15803d'] : ['', '#6b7280'];", "S.save === 'saved' ? ['ذخیره شد ✓', '#15803d'] : S.save === 'error' ? ['ذخیره نشد — ارتباط با سرور بررسی شود', '#b91c1c'] : ['', '#6b7280'];");
   swap("quick: [q('assessee-draft',", "quick: [], unusedQuick: [q('assessee-draft',");
   // Remove demo-only UI: quick-login divider, demo banners/badges, demo tools, "demo" wording.
   swap('display:flex;align-items:center;gap:12px;color:#9ca3af;font-size:12.5px\\"><div style=\\"flex:1;height:1px;background:#e5e7eb\\"><\\u002Fdiv>ورود سریع (نمایشی)', 'display:none">');
@@ -573,13 +584,14 @@ const readJson = async req => {
 
 async function handle(req, res) {
   const { pathname } = new URL(req.url, 'http://x');
-  const send = (code, body, extra = {}) => { res.writeHead(code, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', ...extra }); res.end(JSON.stringify(body)); };
+  const send = (code, body, extra = {}) => { res.writeHead(code, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'no-referrer', ...extra }); res.end(JSON.stringify(body)); };
 
   if (req.method === 'GET' && pathname === '/') {
-    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY' });
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'Referrer-Policy': 'no-referrer' });
     return res.end(page);
   }
   if (!pathname.startsWith('/api/')) return res.writeHead(404).end('Not found');
+  if (pathname === '/api/health' && req.method === 'GET') return send(200, { ok: true }); // liveness probe; no data, no auth
 
   // CSRF: browsers always send Origin on cross-site writes; refuse any that is not this host.
   if (req.method !== 'GET' && req.headers.origin && new URL(req.headers.origin).host !== req.headers.host) return send(403, { error: 'درخواست نامعتبر است' });
@@ -595,12 +607,12 @@ async function handle(req, res) {
     attempts.delete(ip);
     const p = principalOf(username);
     if (p.role !== 'ADMIN' && stateEmpty()) return send(403, { error: 'سامانه هنوز راه‌اندازی نشده است' });
-    return send(200, { username, role: p.role }, { 'Set-Cookie': `sid=${newSession(username)}; HttpOnly; SameSite=Strict; Path=/; Max-Age=${SESSION_MS / 1000}` });
+    return send(200, { username, role: p.role }, { 'Set-Cookie': `sid=${newSession(username)}; HttpOnly; SameSite=Strict; Path=/; Max-Age=${SESSION_MS / 1000}${COOKIE_SECURE}` });
   }
   if (pathname === '/api/logout' && req.method === 'POST') {
     const sid = cookieOf(req).sid;
     if (sid) db.prepare('DELETE FROM sessions WHERE sid_hash = ?').run(sha(sid));
-    return send(200, {}, { 'Set-Cookie': 'sid=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0' });
+    return send(200, {}, { 'Set-Cookie': 'sid=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0' + COOKIE_SECURE });
   }
 
   const p = sessionPrincipal(req);
@@ -714,10 +726,11 @@ let page;
   page = buildPage();
   http.createServer((req, res) => {
     handle(req, res).catch(e => {
-      if (e.status && e.status < 500) { if (!res.headersSent) res.writeHead(e.status, { 'Content-Type': 'application/json' }); return res.end(JSON.stringify({ error: e.message })); }
+      // after "payload too large" the rest of the body is unread, so the connection must not be reused (clients would hang on it)
+      if (e.status && e.status < 500) { if (!res.headersSent) res.writeHead(e.status, { 'Content-Type': 'application/json', ...(e.status === 413 ? { Connection: 'close' } : {}) }); return res.end(JSON.stringify({ error: e.message })); }
       console.error(e);
       if (!res.headersSent) res.writeHead(500, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ error: 'خطای داخلی سرور' }));
     });
-  }).listen(PORT, () => console.log('http://localhost:' + PORT));
+  }).listen(PORT, HOST, function () { console.log('http://' + (HOST === '127.0.0.1' ? 'localhost' : HOST) + ':' + this.address().port); });
 })();
