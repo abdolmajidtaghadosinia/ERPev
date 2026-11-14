@@ -1,0 +1,14 @@
+{
+  "name": "readiness-live",
+  "private": true,
+  "description": "Readiness assessment (live version). No dependencies: tests use Node's built-in test runner.",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test --test-reporter=spec --test-concurrency=3 \"test/**/*.test.mjs\"",
+    "test:unit": "node --test --test-reporter=spec \"test/unit/*.test.mjs\"",
+    "test:integration": "node --test --test-reporter=spec --test-concurrency=3 \"test/integration/*.test.mjs\"",
+    "test:e2e": "node --test --test-reporter=spec --test-concurrency=1 \"test/e2e/*.test.mjs\"",
+    "test:fast": "node --test --test-reporter=spec --test-concurrency=3 \"test/unit/*.test.mjs\" \"test/integration/*.test.mjs\""
+  }
+}
